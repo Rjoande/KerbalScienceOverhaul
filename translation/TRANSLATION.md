@@ -43,7 +43,7 @@ The system was designed to work with:
 - **Thinking / reasoning mode**
 - a **closed project environment**
 
-The repository includes a **ready-to-use project instruction file**
+The repository includes a [**ready-to-use project instruction file**](https://github.com/Rjoande/KerbalScienceOverhaul/blob/main/translation/LLM_translation_instructions.txt)
 (in English, therefore usable for any language).
 
 The project environment should include:
