@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# Temp / backup
+*.tmp
+*.bak
+*.backup
+*~
+
+# Logs
+*.log
+
+# Archives (if you generate release packages locally)
+*.zip
+*.7z
+*.rar
