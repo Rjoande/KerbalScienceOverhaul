@@ -11,13 +11,27 @@ The well-known **CrowdSourced Science (CSS)** mod significantly expands this asp
 * it does **not support localization**
 * it is **intrinsically tied to the stock planetary system**
 
-At the same time, major planet packs such as **JNSQ** introduce many new celestial bodies and biomes without providing corresponding science results. **Grannus Expansion Pack (GEP)** includes some science results, but coverage is only partial.
+At the same time, major planet packs such as **JNSQ** add many celestial bodies and biomes without providing corresponding science results. **Grannus Expansion Pack (GEP)** includes some science results, but coverage is only partial.
 
 **Kerbal Science Overhaul (KSO)** was created to fill these gaps while also improving the compatibility and accessibility of several popular science-adding mods.
 
+## Project Scope
+
+| Category | Value |
+|--------|--------|
+| Generated science results | 21,636 |
+| Results for Stock / JNSQ | 16,423 |
+| Results for GEP | 5,213 |
+| Experiments covered (generation) | 63 |
+| Experiments covered (refactoring) | 79 |
+| Celestial bodies covered | 48 |
+| Biomes covered | 174 |
+| Supported science mods | 7 |
+| Mod components | 4 |
+
 ---
 
-# What This Mod Does
+## What This Mod Does
 
 Kerbal Science Overhaul operates on multiple levels.
 
@@ -32,7 +46,7 @@ The project is divided into two main components:
 
 The **ScienceRefactor** component standardizes and improves science results from stock KSP and several popular mods.
 
-This component can be installed independently and provides the following improvements.
+This component can be installed independently and provides the following improvements:
 
 ## 1. Refactoring and Wildcard Support
 
@@ -47,7 +61,7 @@ Additionally, KSP supports only a single `default` result per experiment. Any ad
 
 This ensures that all results remain accessible.
 
-Several minor patch errors present in original mod configurations have also been corrected where they prevented results from appearing.
+Several minor patch errors in original mod configurations have also been corrected where they prevented results from appearing.
 
 ---
 
@@ -73,7 +87,7 @@ ScienceRefactor resolves these conflicts through a **hierarchical patch system**
 
 The second major component of Kerbal Science Overhaul adds a large collection of newly generated science results.
 
-This includes **nearly 22,000 new results** covering most combinations of:
+This includes **over 21,000 new science results** covering most combinations of:
 
 * celestial body
 * biome
@@ -96,17 +110,15 @@ The generation of this dataset required several months of iterative work to:
 * develop reliable prompts
 * balance creative freedom with strict procedural limits
 
-The generated results were then reviewed and integrated into the final dataset.
-
-(A small number of stray hyphens may still exist.)
+All generated results were subsequently reviewed before integration (a small number of stray hyphens may still exist.)
 
 ---
 
 # AI Generation Methodology
 
-Science results were generated using **GPT-5.2 (Premium)** within a controlled project environment.
+Science results were generated using **GPT-5.0 (Premium)** within a controlled project environment.
 
-The generation process relied on a **closed project context**, meaning the model operated only on project-specific files rather than external memory or general retrieval.
+The generation process relied on a **closed project context**, meaning the model operated only on project-specific files rather than external retrieval or memory systems.
 
 The system included:
 
@@ -212,9 +224,9 @@ Supported mods include:
 * [Tantares](https://github.com/Tantares/Tantares) & [Tantares-SP](https://github.com/Tantares/TantaresSP)
 * [Universal Storage 2](https://github.com/linuxgurugamer/universal-storage-2)
 
-### Crowd Sourced Science
+### CrowdSourced Science Integration
 
-Crowd Sourced Science (CSS) is **not treated as an external dependency**.
+CrowdSourced Science (CSS) is **not treated as an external dependency**.
 
 Kerbal Science Overhaul includes a **localized and internally revised version of CSS**, which replaces the original installation entirely.
 
@@ -253,4 +265,4 @@ Kerbal Science Overhaul builds upon the work of many mod authors in the Kerbal S
 * CrowdSourced Science
 * Bluedog Design Bureau
 * Tantares
-* and many other science-adding mods.
+* and many other science-related mods.
