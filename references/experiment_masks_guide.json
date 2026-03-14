@@ -1,0 +1,160 @@
+{
+  "file": "experiment_masks_guide.json",
+  "version": 2,
+  "purpose": "Canonical disambiguation and normalization rules for experiment situationMask, biomeMask and filterKey during science result generation.",
+  "outOfScope": ["mappingType resolution", "source biome mapping logic", "result text style guidance beyond mask/filterKey disambiguation"],
+
+  "reference": {
+    "situations": {
+      "SrfLanded": 1,
+      "SrfSplashed": 2,
+      "FlyingLow": 4,
+      "FlyingHigh": 8,
+      "InSpaceLow": 16,
+      "InSpaceHigh": 32
+    },
+
+    "situationGroups": {
+      "Surface": ["SrfLanded", "SrfSplashed"],
+      "Flying": ["FlyingLow", "FlyingHigh"],
+      "InSpace": ["InSpaceLow", "InSpaceHigh"]
+    },
+
+    "aliases": {
+      "Flying": ["FlyingLow", "FlyingHigh"],
+      "InSpace": ["InSpaceLow", "InSpaceHigh"]
+    }
+  },
+
+  "filterKey": {
+    "expectedFormat": "<BodyName><SituationToken><OptionalBiomeName>",
+
+    "parsingOrder": [
+      "BodyName",
+      "SituationToken",
+      "BiomeRemainder"
+    ],
+
+    "recognizedSituationTokens": [
+      "SrfLanded",
+      "SrfSplashed",
+      "FlyingLow",
+      "FlyingHigh",
+      "InSpaceLow",
+      "InSpaceHigh",
+      "Flying",
+      "InSpace"
+    ],
+
+    "rules": [
+      "SituationToken MUST be matched before biome parsing.",
+      "If SituationToken is an alias (Flying, InSpace), it represents all underlying situations.",
+      "BiomeRemainder is any remaining suffix after situation parsing."
+    ]
+  },
+
+  "maskValidation": {
+    "situationMaskRule": "A situation is valid if (situationMask & situationBit) != 0",
+
+    "biomeMaskRule": "A biome is valid for a situation if (biomeMask & situationBit) != 0",
+
+    "notes": [
+      "biomeMask refers to the same bit positions as situationMask.",
+      "biomeMask = 0 means NO biome-specific results are allowed."
+    ]
+  },
+
+  "resolutionPolicy": {
+    "ifSituationNotAllowed": "rejectKey",
+
+    "ifAliasProvided": "expandAliasThenFilterBySituationMask",
+
+    "ifBiomeProvidedButBiomeMaskDisallows": "stripBiome",
+
+    "ifBiomeProvidedButBiomeNotFound": "rejectKey",
+
+    "ifBodyNotFoundInPlanetDB": "rejectKey",
+
+    "ifSituationPhysicallyOddButMaskAllows": "allow",
+
+    "fallbackBehavior": "prefer dropping biome over dropping situation"
+  },
+
+  "normalizationProcedure": [
+    "Parse filterKey into bodyName, situationToken, biomeCandidate.",
+    "Resolve situationToken into one or more concrete situations (expand aliases if needed).",
+    "For each candidate situation: check validity against situationMask.",
+    "Discard any situation not allowed by situationMask.",
+    "If no situations remain: rejectKey.",
+    "If biomeCandidate exists:",
+    "  - Check biome existence for the body.",
+    "  - For each remaining situation, check biomeMask.",
+    "  - If biomeMask disallows biome: remove biome (keep situation).",
+    "Return one normalized key per remaining situation."
+  ],
+
+  "llmGuidelines": {
+    "tone": "deterministic",
+    "priorityOrder": [
+      "Respect situationMask strictly",
+      "Respect biomeMask strictly",
+      "Preserve situation over biome when resolving conflicts"
+    ],
+    "doNot": [
+      "Do not invent situations not present in situationMask",
+      "Do not invent biomes not present in planet database",
+      "Do not keep biome-specific flavor when biomeMask disallows it"
+    ]
+  },
+
+  "examples": [
+    {
+      "input": {
+        "filterKey": "KerbinSrfLandedShores",
+        "situationMask": 1,
+        "biomeMask": 1
+      },
+      "output": [
+        {
+          "body": "Kerbin",
+          "situation": "SrfLanded",
+          "biome": "Shores"
+        }
+      ]
+    },
+    {
+      "input": {
+        "filterKey": "DunaInSpace",
+        "situationMask": 48,
+        "biomeMask": 0
+      },
+      "output": [
+        {
+          "body": "Duna",
+          "situation": "InSpaceLow",
+          "biome": null
+        },
+        {
+          "body": "Duna",
+          "situation": "InSpaceHigh",
+          "biome": null
+        }
+      ]
+    },
+    {
+      "input": {
+        "filterKey": "MunInSpaceLowMidlands",
+        "situationMask": 16,
+        "biomeMask": 0
+      },
+      "output": [
+        {
+          "body": "Mun",
+          "situation": "InSpaceLow",
+          "biome": null
+        }
+      ],
+      "note": "Biome stripped because biomeMask disallows biome-specific results."
+    }
+  ]
+}

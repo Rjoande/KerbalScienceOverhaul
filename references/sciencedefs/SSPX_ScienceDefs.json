@@ -1,0 +1,749 @@
+{
+    "sspxFishStudy": {
+        "situationMask": 51, "situationList": ["SrfLanded", "SrfSplashed", "FlyingHigh", "InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      0, "biomeList":     [],
+        "requireAtmosphere": false,
+        "description": "Long-duration observation of aquatic organisms in a controlled space environment.",
+        "hints": "Notes focus on how fish behave, adapt, or fail to adapt to microgravity, radiation, and prolonged confinement. Results may emphasize stress, unexpected behavior, or insights into sustaining closed-loop life-support systems.",
+
+        "results":{
+            "Sun": {
+                "SunInSpaceLow": [
+                "The fish are unhappy and the prawns are cooked. Well, saves time during meal prep!"
+                ],
+                "SunInSpaceHigh": [
+                "The slowly circling gyre of the various species in the tank matches your observations of the solar corona."
+                ]
+            },
+            "Kerbin": {
+                "KerbinInSpaceLow": [
+                "The fish seem a little out of sorts. Perhaps they're aching for the wide oceans you see out the porthole."
+                ],
+                "KerbinInSpaceHigh": [
+                "You measure the biophysical properties of the fish. A calcium deficiency seems to be rearing its head."
+                ],
+                "KerbinSrfLanded": [
+                "Everything seems to be happily swimming around in its tank."
+                ]
+            },
+            "Mun": {
+                "MunInSpaceLow": [
+                "The desolation of the Munar surface doesn't betray even a hint of water. You almost feel like the fish understand this as they stay away from the sides of the tank."
+                ],
+                "MunInSpaceHigh": [
+                "As you hurtle around the planet, you being to reflect on the feasibility of grilling a fish on the tank heat exchanger."
+                ],
+                "MunSrfLanded": [
+                "The low gravity seems to throw the fish off a bit - they bob up and down irregularly. The prawns seem happy though."
+                ]
+            },
+            "Minmus": {
+                "Minmus_InSpaceLow": [
+                "Fish and minty ice cream go together so well - oh, I'm sorry, I was supposed to be running this spectral analyzer..."
+                ],
+                "Minmus_InSpaceHigh": [
+                "The fish swim in circles around the tank as the pump equipment happily buzzes."
+                ],
+                "MinmusSrfLanded": [
+                "The low gravity doesn't feel like much to the fish or you. You wonder if the KSC has though of putting a fish in a small spacesuit with an EVA jetpack."
+                ]
+            },
+            "Moho": {
+                "MohoInSpaceLow": [
+                "The fish swim in circles around the tank as the pump equipment works hard to keep the temperature at equilibrium."
+                ],
+                "MohoInSpaceHigh": [
+                "You wish you'd brought a few tropical fish on the trip. The tank heat exchanger is running at full power!"
+                ],
+                "MohoSrfLanded": [
+                "Ah, sweet gravity. You bet you could cook the fish on the hot rocks outside"
+                ]
+            },
+            "Eve": {
+                "EveInSpaceLow": [
+                "The purple seas of Eve beckon! You can't wait to test the reaction of the fish to the planet's interestingly coloured water."
+                ],
+                "EveInSpaceHigh": [
+                "Hurtling toward the planet at high speed, you measure the tastiness-er, health of the fish."
+                ],
+                "EveSrfLanded": [
+                "Holy gadzooks did that solution kill those fish quickly! You guiltily drain the tank that had the Eve water sample in it, faintly conscious of the ticking of the tank radiation counter."
+                ]
+            },
+            "Gilly": {
+                "GillyInSpaceLow": [
+                "Your intuition is really telling you that there's no point in scanning the fish now. However, you could try adding something to the water..."
+                ],
+                "GillyInSpaceHigh": [
+                "Your intuition tells you that the fish won't really be affected by landing on this planet."
+                ],
+                "GillySrfLanded": [
+                "You hope the crew won't notice the new rocky decorations you've placed inside the tank. They were just floating by out there!"
+                ]
+            },
+            "Ike": {
+                "IkeInSpaceLow": [
+                "It's not hard to like Ike, but the fish seem to disagree."
+                ],
+                "IkeInSpaceHigh": [
+                "This is as good a place as any for raising fish."
+                ],
+                "IkeSrfLanded": [
+                "Landing on Ike, you find the fish crowded towards the porthole, staring at the sight of majestic Duna rising in the distance."
+                ]
+            },
+            "Duna": {
+                "DunaInSpaceLow": [
+                "Ice caps and dust! You feel like the fish could like this planet."
+                ],
+                "DunaInSpaceHigh": [
+                "Heading in towards Duna, you feel a sense of accomplishment for having kept the fish alive so far."
+                ],
+                "DunaSrfLanded": [
+                "Someone has contaminated the tank with planetary dust! The red colour is somewhat worrying!"
+                ]
+            },
+            "Dres": {
+                "DresInSpaceLow": [
+                "It's lonely near Dres, but luckily the blowfish is keeping you company."
+                ],
+                "DresInSpaceHigh": [
+                "While here, floating in your tin can, you reflect on canned fish products."
+                ],
+                "DresSrfLanded": [
+                "Nobody likes it here, with the exception of the prawns."
+                ]
+            },
+            "Jool": {
+                "JoolInSpaceLow": [
+                "While observing the planet's colourful storms, you realize the temperature probe has been in the fish tank since the last experiment. You hurriedly remove it."
+                ],
+                "JoolInSpaceHigh": [
+                "The green planet reminds you of the peas from your rehydrated meal packed that you fed to the fish last night."
+                ],
+                "JoolSrfLanded": [
+                "The fish chuckle at your lunacy."
+                ]
+            },
+            "Laythe": {
+                "LaytheInSpaceLow": [
+                "What a beautiful world! You wonder if there are any specimens of aquatic life down there to add to your collection."
+                ],
+                "LaytheInSpaceHigh": [
+                "This world looks fish friendly. As you tell the fish this, you sense that they are indifferent."
+                ],
+                "LaytheSrfLanded": [
+                "Some fish are missing. It appears one of your crew have taken the liberty of releasing them into the Laythian seas, contaminating them for years to come."
+                ]
+            },
+            "Vall": {
+                "VallInSpaceLow": [
+                "Frigid! You crank the tank heater. The fish look happier."
+                ],
+                "VallInSpaceHigh": [
+                "Time to whip out your fish bio-spectral analyzer probe! No, stop snickering, that wasn't innuendo."
+                ],
+                "VallSrfLanded": [
+                "You can't help but wish you'd brought some colder-water fish. The chunk of Vall's icy surface you dissolved in the tank is throwing off the temperature distribution."
+                ]
+            },
+            "Tylo": {
+                "TyloInSpaceLow": [
+                "The fish look straight back at you, making you want to reconsider your mission choices."
+                ],
+                "TyloInSpaceHigh": [
+                "The pull of Tylo's gravity is similar to Kerbin's, so you'd think the fish would be pleased. Instead, they're not. Oh yeah, you're still in orbit."
+                ],
+                "TyloSrfLanded": [
+                "The fish sulk at the bottom of the tank, looking happy to be back in normal gravity but somehow depressed by the bare landscape outside."
+                ]
+            },
+            "Bop": {
+                "BopInSpaceLow": [
+                "The fish seem disoriented and repeatedly bop into each other."
+                ],
+                "BopInSpaceHigh": [
+                "The fish are excited at the thought of gravity again, and begin bopping against the top of the tank."
+                ],
+                "BopSrfLanded": [
+                "Science log, supplemental. These fish look tasty but the captain has locked the access hatch."
+                ]
+            },
+            "Pol": {
+                "PolInSpaceLow": [
+                "Some of the fish are a similar colour to the moon out the window. Fancy that!"
+                ],
+                "PolInSpaceHigh": [
+                "Biospectral analysis indicates the fish have suffered a lot of bone loss, and look a little droopy. You might not need to debone them at this rate."
+                ],
+                "PolSrfLanded": [
+                "You think you might need some new fish. The Pol-len doesn't seem to make great fish food, and you're wondering if the dead ones are safe to eat."
+                ]
+            },
+            "Eeloo": {
+                "EelooInSpaceLow": [
+                "Arriving in close orbit around the planet, you observe the aquaponics reservoir. Things seem more or less the same as last time."
+                ],
+                "EelooInSpaceHigh": [
+                "This fish have huddled together for protection from the loneliness of the void. You wish you could get in there too."
+                ],
+                "EelooSrfLanded": [
+                "This far from home, you continue to wonder about how eating a few of the fish would improve rations, and how it would affect the science results."
+                ]
+            }
+        }
+    },
+    
+    "sspxPlantGrowth": {
+        "situationMask": 51, "situationList": ["SrfLanded", "SrfSplashed", "FlyingHigh", "InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      0, "biomeList":     [],
+        "requireAtmosphere": false,
+        "description": "Controlled growth experiments to study plant development beyond Kerbin.",
+        "hints": "Observations track how plants respond to light, gravity, soil substitutes, and environmental conditions in space or on alien worlds. Results often comment on growth failure, adaptation limits, or early signs of viability for sustained habitation.",
+
+        "results":{
+            "Sun": {
+                "SunInSpaceLow": [
+                "An associate external climate sensor's needle leans pretty close to the red. For the love of the nearest cook, keep those shutters closed!"
+                ],
+                "SunInSpaceHigh": [
+                "You open a shutter to see what difference its impact on a plant may be, now that you are beyond Kerbin's influence... and its protection... A plant shrivels visibly quickly. You make a note to absolutely never do this again."
+                ]
+            },
+            "Kerbin": {
+                "KerbinInSpaceLow": [
+                "The plants grow very slowly, if at all. It may be far too soon for any note-worthy results to appear."
+                ],
+                "KerbinInSpaceHigh": [
+                "You open a shutter to see what impact it may have on the plants. Nothing happens immediately but later on you log that one of them has shriveled and possibly burned, particularly a sun-ward plant. That's not a good sign."
+                ],
+                "KerbinSrfLanded": [
+                "The plants sparkle. They must be quite happy to be here."
+                ]
+            },
+            "Mun": {
+                "MunInSpaceLow": [
+                "The taller plants gravitate toward the Mun. Get it? Gravitate?"
+                ],
+                "MunInSpaceHigh": [
+                "As you study the plants you ponder the possibility of farming on Mun's surface."
+                ],
+                "MunSrfLanded": [
+                "You're tempted to shovel some Mun soil into a pot and sow it. However, a bit of red tape needs to be cut for this dream to take root.",
+                "You fetch some Mun soil and apply it to a marked pot. The growth rate seems unchanged, however, it bares fruit a little slower than its partner in pure Kerbin soil."
+                ]
+            },
+            "Minmus": {
+                "Minmus_InSpaceLow": [
+                "Several leaves seem to change color. They appear to be trying to make some form of connection with Minmus."
+                ],
+                "Minmus_InSpaceHigh": [
+                "The plants gravitate toward Minmus. How is it possible with Minmus' miniscule gravity?"
+                ],
+                "MinmusSrfLanded": [
+                "Is Minmus made of ice cream? Will the plants grow in it? You beg for R&D's permission for this test.",
+                "You fetch some Minmus soil and apply it to a marked pot. It begins to wither... You confirm that this soil is too moist and has both great highs and lows in nutrients."
+                ]
+            },
+            "Moho": {
+                "MohoInSpaceLow": [
+                "The plants have darkened a bit but they seem as fine as ever."
+                ],
+                "MohoInSpaceHigh": [
+                "You spot a large hole in the soil of a sample plant, and the plant itself is gone... What the kraken?"
+                ],
+                "MohoSrfLanded": [
+                "It actually worries you, the idea of sampling this soil for the experiment. You hesitate to begin.",
+                "Given the fairly extreme situation here you prepare two marked pots with Moho soil. One plant withers but the other grows tall and bares no fruit. Later diagnosis reveals that plant Chemistry is very fussy with Moho."
+                ]
+            },
+            "Eve": {
+                "EveInSpaceLow": [
+                "Gravitating towards Eve now, you wonder whether they changed their minds or if it's finally actual gravioli that's pulling them."
+                ],
+                "EveInSpaceHigh": [
+                "The plants gravitate...away from Eve. They must want not to be here."
+                ],
+                "EveSrfLanded": [
+                "The plants grow thicker and shorter, and their taller portions wither. Eve's gravity must be overwhelming them.",
+                "The sample plant withers as you approach it with the steamy purple soil. This must be some really potent stuff.",
+                "You fetch some Eve soil and apply it to two marked pots. You note that one withers, very likely due to poisoning, meanwhile the other, which happens to be an Orchid, grows wildly and wraps around the pot like a kraken's tentacles."
+                ]
+            },
+            "Gilly": {
+                "GillyInSpaceLow": [
+                "Oh look, a young fruit. You note its presence and make an uneventful diagnosis."
+                ],
+                "GillyInSpaceHigh": [
+                "The plants show no notable new characteristics. Gilly must not register to them."
+                ],
+                "GillySrfLanded": [
+                "You find it particularly hard to fetch the soil sample for the experiment. If only Gilly was a bit more massive.",
+                "You fetch some Gilly soil and apply it to a marked pot. The plant shows no response for better or worse so Gilly must be just right."
+                ]
+            },
+            "Ike": {
+                "IkeInSpaceLow": [
+                "The plants gravitate toward Ike. The plants like Ike."
+                ],
+                "IkeInSpaceHigh": [
+                "The transit time seemed to be on point. The seasonal plants are flowering."
+                ],
+                "IkeSrfLanded": [
+                "You fetch some Ike soil and apply it to a marked pot. The plant grows faster than normal. It looks like Mun has competition.",
+                "You fetch some Ike soil and apply it to a marked pot. It shows no new behavior, and is confirmed to be just right."
+                ]
+            },
+            "Duna": {
+                "DunaInSpaceLow": [
+                "The plants are in full bloom. Now is as good a time as any to try to colonize Duna.",
+                "You wonder what the plants really think about the red planet, given their ability to show interest towards Kerbin's moons."
+                ],
+                "DunaInSpaceHigh": [
+                "You note a mild but increasing redness in the fruits and flowers."
+                ],
+                "DunaSrfLanded": [
+                "You fetch some Duna soil and apply it to a marked pot. The plant shows signs of starvation, maybe even poisoning. You determine that the metal content is too dang high!"
+                ]
+            },
+            "Dres": {
+                "DresInSpaceLow": [
+                "The plants no longer respond. They are mellow and they grow at their normal pace."
+                ],
+                "DresInSpaceHigh": [
+                "The plants release water droplets and they float about loosely, or slowly fall away back into their soil. Perhaps they are showing more emotion? Are they crying?"
+                ],
+                "DresSrfLanded": [
+                "You fetch some Dres soil and apply it to a marked pot. The plant withers away due to starvation. It's as if the plant did not or could not acknowledge the presence of any soil.",
+                "You fetch some Dres soil and apply it to a marked pot. They show no new characteristcs, meaning Dres must be good for farming on."
+                ]
+            },
+            "Jool": {
+                "JoolInSpaceLow": [
+                "The plants sparkle again. Something about Jool must really appeal to them."
+                ],
+                "JoolInSpaceHigh": [
+                "The plants gravitate toward Jool. Maybe there's something with green bodies."
+                ],
+                "JoolSrfLanded": [
+                "You take a moment to think very, very hard before letting any of the outside environment into this greenhouse.",
+                "...Lol"
+                ]
+            },
+            "Laythe": {
+                "LaytheInSpaceLow": [
+                "The plants begin blossoming sooner than expected. Laythe must be posing some kind of beneficial effect on them even at this height."
+                ],
+                "LaytheInSpaceHigh": [
+                "The plants appear very bright and healthy. It's as though they have eager expectation to meet Laythe's surface."
+                ],
+                "LaytheSrfLanded": [
+                "You fetch some Laythe soil and apply it to a marked pot. The plant withers and you determine that there is too much moisture and there may be another extreme imbalance of nutrients.",
+                "You fetch some Laythe soil and apply it to a marked pot. It grows well and even slightly faster and fuller than it did on Kerbin."
+                ]
+            },
+            "Vall": {
+                "VallInSpaceLow": [
+                "Nothing out of the ordinary happens. However, it seems about time to pick some fruits."
+                ],
+                "VallInSpaceHigh": [
+                "The plants show no sign of excitement this time. The situation seems nominal."
+                ],
+                "VallSrfLanded": [
+                "You fetch some Vall soil and apply it to a marked pot. The soil seems to have a strong imbalance of moisture and nutrients but within tolerable limits as the plant does not eventually show signs of death."
+                ]
+            },
+            "Tylo": {
+                "TyloInSpaceLow": [
+                "The plants gravitate more strongly. It gives you a gentle reminder of how low the vessel is orbiting."
+                ],
+                "TyloInSpaceHigh": [
+                "Several plant leaves bend slightly, the typical gravitation matter, but very feintly this time. Well, of course even they acknowledge this dreadful moon's might."
+                ],
+                "TyloSrfLanded": [
+                "You fetch some Tylo soil and apply it to a marked pot. The plant starves and withers. This soil must be pretty dry or may contain something unpalatable."
+                ]
+            },
+            "Bop": {
+                "BopInSpaceLow": [
+                "Some loose flower petals float about. Some more bounce off of things as you notice them. You could say those bits are Bopping about."
+                ],
+                "BopInSpaceHigh": [
+                "You wonder whether the ship is actually in this moon's sphere of influence as you conduct this experiment... You also wonder if the plants are aware of Bop's influence."
+                ],
+                "BopSrfLanded": [
+                "You fetch some Bop soil and apply it to a marked pot. The plant gradually withers but this was expected. Essential microbes are unlikely to be present on this moon at this distance from the star."
+                ]
+            },
+            "Pol": {
+                "PolInSpaceLow": [
+                "You notice a bit of yellow color in some of the plants...this warrants close investigation."
+                ],
+                "PolInSpaceHigh": [
+                "The plants seem to be blossoming right now. Did their floweing season come early?"
+                ],
+                "PolSrfLanded": [
+                "You fetch some Pol soil and apply it to a marked pot. The plant gradually withers but this was expected. Essential microbes are unlikely to be present on a world like this at this distance from anything."
+                ]
+            },
+            "Eeloo": {
+                "EelooInSpaceLow": [
+                "With the vessel oriented towards the star, and no lamps on, you play the longest round of the waiting game to see that... nothing significant happens."
+                ],
+                "EelooInSpaceHigh": [
+                "You turn off the sun lamps that shine on a particular plant or two, partially to save electricity but mainly as an early test of Eeloo's environment."
+                ],
+                "EelooSrfLanded": [
+                "You fetch some Eeloo soil and apply it to a marked pot. The plant slowly withers but you saw this a kilometer away. Too much ice and no essential microbes make for an unpleasing test result."
+                ]
+            }
+        }
+    },
+    
+    "sspxVisualObservation": {
+        "situationMask": 51, "situationList": ["SrfLanded", "SrfSplashed", "FlyingHigh", "InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      3, "biomeList":     ["SrfLanded", "SrfSplashed"],
+        "requireAtmosphere": false,
+        "description": "Direct visual observations of the surrounding environment and celestial bodies.",
+        "hints": "Subjective impressions recorded while looking outside the vessel or habitat. Results emphasize perspective, scale, isolation, and emotional responses rather than scientific measurements.",
+
+        "results":{
+            "Sun": {
+                "SunInSpaceLow": [
+                "The light is absolutely blinding, and you can only peer out for brief periods of time before turning away from its power."
+                ],
+                "SunInSpaceHigh": [
+                "Space is so barren out here, with nothing to see for millions and millions of kilometers."
+                ]
+            },
+            "Kerbin": {
+                "KerbinInSpaceLow": [
+                "It's just like a painting. You see vibrant greens, blues, and tans pass you by underneath, and have to gasp at its beauty."
+                ],
+                "KerbinInSpaceHigh": [
+                "All of history seems so small and insignificant from out here. All of it enclosed in a pale blue dot."
+                ],
+                "KerbinSrfLanded": [
+                "Yup, it's a window alright. A really expensive one at that."
+                ]
+            },
+            "Mun": {
+                "MunInSpaceLow": [
+                "Solemn greys pass you by, mountains and valleys that seem utterly desolate and foreign."
+                ],
+                "MunInSpaceHigh": [
+                "The Mun and Kerbin seem to rule the skies as equal partners from this point of view."
+                ],
+                "MunSrfLanded": [
+                "You hold up your thumb and blot out Kerbin. You suddenly feel very, very humble."
+                ]
+            },
+            "Minmus": {
+                "Minmus_InSpaceLow": [
+                "Rolling hills and imposing plateaus give way to sheer cliff faces and flats as far as the eye can see. Those flats appear to be very promising landing sites."
+                ],
+                "Minmus_InSpaceHigh": [
+                "Minmus is still very small in the night sky, with no real noticeable features yet."
+                ],
+                "MinmusSrfLanded": [
+                "A minty green as far as the eye can see, subliminally making you crave a certain dessert. You brush aside the thoughts, as no treats were to be found here."
+                ]
+            },
+            "Moho": {
+                "MohoInSpaceLow": [
+                "This planet seems burnt to its very core, battered by impacts and baked by billions of years close to Kerbol."
+                ],
+                "MohoInSpaceHigh": [
+                "You gaze out at Moho's dark brown surface, wondering how much you've tanned it the time you were in the window."
+                ],
+                "MohoSrfLanded": [
+                "You have to squint to even make out the rocks around you, and the air is very hot in the window."
+                ]
+            },
+            "Eve": {
+                "EveInSpaceLow": [
+                "Eve's silver seas and purple soil wait ominously below."
+                ],
+                "EveInSpaceHigh": [
+                "Despite its distance, Eve's size and color commands great respect in the night sky."
+                ],
+                "EveSrfLanded": [
+                "The toxic purple wind whips against the side of the window, slowly eroding the glass. You feel uncomfortable."
+                ]
+            },
+            "Ike": {
+                "IkeInSpaceLow": [
+                "Looks just like the Mun to me."
+                ],
+                "IkeInSpaceHigh": [
+                "Whether you got here by accident or on purpose, Ike isn't much of a looker. You divert your eyes back to Duna instead."
+                ],
+                "IkeSrfLanded": [
+                "Upon closer inspection, Ike's dark grey rocks are pretty interesting to look it. You wish you hadn't judged Ike so harshly."
+                ]
+            },
+            "Duna": {
+                "DunaInSpaceLow": [
+                "You can make out the traces of ancient red valleys, riverbeds, and lakes. What happened to them?"
+                ],
+                "DunaInSpaceHigh": [
+                "Duna's bright reds and whites stand out against the sky. It looks more welcoming thean mencacing."
+                ],
+                "DunaSrfLanded": [
+                "While the rusty reds of the soil and sky feel strange and unfamiliar, you could see this as your home in the future."
+                ]
+            },
+            "Dres": {
+                "DresInSpaceLow": [
+                "The planet is mostly boring, but the bright grey portions, deep canyon, and pockmarked craters are interesting to see."
+                ],
+                "DresInSpaceHigh": [
+                "What? There's a planet here? I don't see it."
+                ],
+                "DresSrfLanded": [
+                "The topography is more interesting than you thought it would be, but the trip was still too long to be worth it."
+                ]
+            },
+            "Jool": {
+                "JoolInSpaceLow": [
+                "Jool's green cloud bands fill up your whole vision, enveloping you in a delicate dance of gases."
+                ],
+                "JoolInSpaceHigh": [
+                "This far away, Jool's interesting system beckons to you. So close, but so far away."
+                ],
+                "JoolSrfLanded": [
+                "How your window hasn't shattered yet you have no idea."
+                ]
+            },
+            "Laythe": {
+                "LaytheInSpaceLow": [
+                "Laythe's shallow seas, secluded islands, and vibrant blue atmosphere beg to be visited and settled."
+                ],
+                "LaytheInSpaceHigh": [
+                "The small island chains speak of an untouched paradise waiting to be explored."
+                ],
+                "LaytheSrfLanded": [
+                "The shoreline vista soothes you, the sound of lapping waves around you. Far above, a green giant reminds you that these are alien skies."
+                ]
+            },
+            "Vall": {
+                "VallInSpaceLow": [
+                "Despite the interesting coloration, Vall doesn't have much to show off. At least, in comparison to Jool itself."
+                ],
+                "VallInSpaceHigh": [
+                "This blue ball looks markedly different from Laythe. You wonder what it would take to transform that ice into seas."
+                ],
+                "VallSrfLanded": [
+                "If you were colorblind, you would have no way of distinguishing Vall from Minmus. You know, except for the massive green ball in the sky."
+                ]
+            },
+            "Tylo": {
+                "TyloInSpaceLow": [
+                "You feel that coming any closer to this moon would mean your end. You shy away from the window."
+                ],
+                "TyloInSpaceHigh": [
+                "Tylo rules the sky as much as Jool from this vantage point. You picture them dueling for supremacy of the moons."
+                ],
+                "TyloSrfLanded": [
+                "Tylo's surface is rocky and dull but still somehow intimidating. You feel stranded."
+                ]
+            },
+            "Bop": {
+                "BopInSpaceLow": [
+                "Though Bop itself is unassuming, odd noises in the ship give you the feeling you are unwelcome here."
+                ],
+                "BopInSpaceHigh": [
+                "The moon is a mere brown speck among the grandeur of Jool's other moons."
+                ],
+                "BopSrfLanded": [
+                "Though the surface is barren and desolate, you get chills, as if some powerful force was watching you."
+                ]
+            },
+            "Pol": {
+                "PolInSpaceLow": [
+                "Pol's lumpy surface casts deep, long shadows over its many valleys."
+                ],
+                "PolInSpaceHigh": [
+                "Despite being a mere speck, Pol's unique color gives it an air of mystery and importance in the Jool system."
+                ],
+                "PolSrfLanded": [
+                "Interesting, craggy shapes stick out of the surface amid the cavernous valleys and towering hills. This is a place that demands to be explored."
+                ]
+            },
+            "Eeloo": {
+                "EelooInSpaceLow": [
+                "The icy mood of the crew is alleviated by looking at the world below you. You have no desire to land in the yellow snow."
+                ],
+                "EelooInSpaceHigh": [
+                "This far out, the isolation grows to new levels. The dimness of Kerbol doesn't help."
+                ],
+                "EelooSrfLanded": [
+                "Despite the distance, this place seems a little like home, - winter on Kerbin."
+                ]
+            }
+        }
+    },
+    
+    "sspxTelescopeObservation": {
+        "situationMask": 51, "situationList": ["SrfLanded", "SrfSplashed", "FlyingHigh", "InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      3, "biomeList":     ["SrfLanded", "SrfSplashed"],
+        "requireAtmosphere": false,
+        "description": "Astronomical observations using a general-purpose telescope, deployed from a variety of environments.",
+        "hints": "Observations of celestial objects made from the surface, high atmosphere, or orbit. Results may reflect environmental limitations, local conditions, or unique vantage points rather than optimized, instrument-specific performance.",
+
+        "results":{
+            "Sun": {
+                "SunInSpaceLow": [
+                "You observe the sun. This was a spectacularly bad idea."
+                ],
+                "SunInSpaceHigh": [
+                "You observe the sun. Only after you hear the \"temperature anomaly\" alarm do you remember you forgot to install the solar filter. This is a real certified Icarus moment."
+                ]
+            },
+            "Kerbin": {
+                "KerbinInSpaceLow": [
+                "Above the influence of atmospheric turbulence, the telescope is capable of reaching much more consistently high resolutions at a wide field of view than possible from the ground. Until you get orders from the Kerbal Astronomical Society, you use the time to split a few double stars which you hadn't got yet."
+                ],
+                "KerbinInSpaceHigh": [
+                "Far from Kerbin, the observatory is capable of observing a vast portion of the sky with little interference. You begin a survey of distant galaxies."
+                ],
+                "KerbinSrfLandedDesert": [
+                "From within Kerbin's atmosphere, the atmospheric turbulence causes the image to boil and shimmer, leading to a lower resolution. Planetary imaging must be done with extreme-short exposures and with digital processing to stack the image."
+                ],
+                "KerbinSrfLandedHighlands": [
+                "The observatory is relatively unhindered by low-level fog and some of the effects of atmospheric seeing conditions, allowing a higher resolution than at sea level. Still though, it's not the best place for imaging at high resolution, so you mostly concern yourself with assembling mosaics of larger deep-sky-objects."
+                ],
+                "KerbinSrfLandedMountains": [
+                "This is a good place for a remote observatory. Above the effects of light pollution and atmospheric turbulence, the sky opens up in sharp, high resolution detail--though space would be better. You search for nearby exoplanetary transit events with the SLIPPIST-camera."
+                ],
+                "KerbinSrfLandedWater": [
+                "Sea spray and sand is getting into the instrument. That's going to be a maintenance nightmare. You attempt to do some imaging, but between the fog, the turbulent air, and the sea spray, this observing session's a wash.",
+                "Sea spray and sand is getting into the instrument. That's going to be a maintenance nightmare. You attempt to do some imaging, but between the fog, the turbulent air, and the sea spray, this observing session's a wash."
+                ],
+                "KerbinSrfSplashedWater": [
+                "Sea spray and sand is getting into the instrument. That's going to be a maintenance nightmare. You attempt to do some imaging, but between the fog, the turbulent air, and the sea spray, this observing session's a wash."
+                ],
+                "KerbinSrfLandedKSC": [
+                "Light pollution here at the KSC makes observing deep-sky-objects very impractical. You really need to get out to the middle of nowhere if you wanna see the night sky. Still though, this is a great place for a public Munwatch, maybe Walt Kerman and his P.R. team have an idea about how to do that."
+                ],
+                "KerbinSrfLanded": [
+                "From within Kerbin's atmosphere, the atmospheric turbulence causes the image to boil and shimmer, leading to a lower resolution. Planetary imaging must be done with extreme-short exposures and with digital processing to stack the image."
+                ]
+            },
+            "Mun": {
+                "MunInSpaceLow": [
+                "If you could just slow down, the instrument would be capable of extreme high resolution surface images. In fact, you'd almost not need to send down astronauts! Who needs astronauts when you have astronomers, after all."
+                ],
+                "MunInSpaceHigh": [
+                "Pointing the observatory down towards the surface would make for a high-resolution mapping satellite, but we only packed astronomical sensors, so you'll have to settle for unraveling the mysteries of the cosmos."
+                ],
+                "MunSrfLanded": [
+                "This is a great place for a close-to-home deep space observatory! The skies really pop, day and night."
+                ]
+            },
+            "Minmus": {
+                "Minmus_InSpaceHigh": [
+                "You attempt a long-exposure photo to try and detect a coma or cometary tail... if there is one, it's being washed out by Minmus' incredibly reflective surface."
+                ],
+                "MinmusSrfLanded": [
+                "You attempt to measure the spectrum of a bright star, looking for any additional absorption lines, searching for hints of an extended exosphere or cometary envelope on Minmus. There seems to be a very faint absorption feature which you can't match to the star's database."
+                ]
+            },
+            "Moho": {
+                "MohoSrfLanded": [
+                "Moho's rotation rate is remarkably slow, so despite the incredibly bright sun during the day, very long uninterrupted exposures are possible. One useful application of this observatory would be to search for Near-Kerbin asteroids."
+                ]
+            },
+            "Eve": {
+                "EveInSpaceLow": [
+                "Note to self: throw away red and green filters, they don't work here."
+                ],
+                "EveInSpaceHigh": [
+                "You point the telescope at Gilly. It's quite startling to see details on the smallest moon--it normally looks like a faint dot!"
+                ],
+                "EveSrfLanded": [
+                "This is a pretty terrible place for an observatory - the thick clouds are always present!"
+                ]
+            },
+            "Gilly": {
+                "GillySrfLanded": [
+                "A strange, niche location for an observatory, however one which provides many useful opportunities to observe Eve at high resolution. Infrared sensors are capable of piercing the clouds, and blue, violet, and ultra-violet filters are best suited for observing the clouds and weather patterns themselves."
+                ]
+            },
+            "Ike": {
+                "IkeSrfLanded": [
+                "You hope you remembered to land on the Duna-facing hemisphere so you can observe it at high resolution. Ike's stationary orbit provides an excellent viewing post for looking at roughly half of Duna, and a terrible viewing post for looking at anything else."
+                ]
+            },
+            "Duna": {
+                "DunaSrfLanded": [
+                "You set up the telescope to point back towards the Kerbin system. Even at high power, they're small. You feel smaller. Dust in the atmosphere prevents the acquisition of faint detail, but the seeing conditions here are very good, and when Jool is at opposition this telescope can beat similar Kerbin-based instruments in seeing its cloud bands, which no longer appear fuzzy."
+                ]
+            },
+            "Dres": {
+                "DresInSpaceLow": [
+                "They said to get out in the middle of nowhere to do deep-sky-viewing. But I don't think they meant it like that!"
+                ],
+                "DresInSpaceHigh": [
+                "There seems to be a large amount of star-trails interfering with long-exposure images near Dres' equatorial plane... could there be a debris disk here?"
+                ],
+                "DresSrfLanded": [
+                "It's like no-one will ever know you put a telescope here."
+                ]
+            },
+            "Jool": {
+                "JoolInSpaceLow": [
+                "From this vantage point, many of the objects in the Jool system are easily seen. Tylo, Vall, Bop, Pol, and Kerbin... hey wait a minute, that's not how this works!"
+                ],
+                "JoolInSpaceHigh": [
+                "What do you know, it turns out Jool isn't always fuzzy through a telescope!"
+                ],
+                "JoolSrfLanded": [
+                "This location would make a great observing post for studying the Joolian moons, were it not for the scorching temperatures, the crushing pressures, and the many layers of clouds and haze."
+                ]
+            },
+            "Laythe": {
+                "LaytheInSpaceHigh": [
+                "The images you get off the sensors are full of extra noise for some reason. Who needs a geiger counter when you have horrifying signal to noise ratios!"
+                ],
+                "LaytheSrfLanded": [
+                "This is like Kerbin, but no light pollution to speak of, well at least as long as you ignore Jool, which is much brighter than the Mun, and Tylo and Vall, which are almost as bright as the Mun... hey we did remember to park the observatory on the far side away from Jool, right?"
+                ],
+                "LaytheSrfSplashed": [
+                "Sea spray and sand are getting into the instrument. That's going to be a maintenance nightmare. You attempt to do some imaging, but between the fog, the turbulent air, and the sea spray, this observing session's a wash."
+                ]
+            },
+            "Vall": {
+                "VallSrfLanded": [
+                "Aside from the radiation messing up the signal, this would make a great observing post for studying the other worlds of this system."
+                ]
+            },
+            "Tylo": {
+                "TyloSrfLanded": [
+                "Aside from the radiation messing up the signal, this would make a great observing post for studying the other worlds of this system."
+                ]
+            },
+            "Bop": {
+                "BopInSpaceHigh": [
+                "You slew the telescope around to face Bop. For some reason the software won't let you focus in on the surface in one place. It gives a \"Danger\" message like if you try to point it at the Sun."
+                ]
+            },
+            "Pol": {
+                "PolInSpaceLow": [
+                "From low orbit there seems to be a load of statically charged dust particles clinging to the sensor like pollen. Perhaps Pol isn't the best place to put an observatory, even though it does look down on the entire Jool system."
+                ],
+                "PolSrfLanded": [
+                "Keep the dust off the sensors! We've had enough of this kind of error in the past. At least dust on the mirrors makes little difference aside from reducing the contrast and resolution slightly. It'd probably just damage the mirrors more if we tried to wipe them clean."
+                ]
+            },
+            "Eeloo": {
+                "EelooInSpaceHigh": [
+                "Now THIS is the middle of nowhere! From this perspective, the magnitude of many faint trans-joolean-objects is increased dramatically during opposition, allowing for a better and more accurate categorization of the small icy objects sharing the space beyond Jool."
+                ],
+                "EelooSrfLanded": [
+                "Eeloo is great because it's very easy to cool the imaging sensors to reduce noise. You contemplate plans to shovel the surface material directly onto the sensor to improve cooling."
+                ]
+            }
+        }
+    }
+}

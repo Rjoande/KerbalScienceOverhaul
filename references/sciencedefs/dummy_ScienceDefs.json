@@ -1,0 +1,17 @@
+{
+    "experimentID": {
+        "situationMask":  0, "situationList": [],
+        "biomeMask":      0, "biomeList":     [],
+        "requireAtmosphere": false,
+        "description": "",
+        "hints": "",
+
+        "results":{
+            "bodyId": {
+                "filterKey": [
+                    "text"
+                ]
+            }
+        }
+    }
+}

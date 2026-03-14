@@ -1,0 +1,33 @@
+{
+    "tantares_radiometer_scan": {
+        "situationMask": 48, "situationList": ["InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      0, "biomeList":     [],
+        "requireAtmosphere": false,
+        "description": "Remote radiometric measurements of electromagnetic radiation emitted or reflected by a planetary body across selected wavelength bands.",
+        "hints": "Results may reference infrared thermal emission, reflected solar radiation, microwave brightness, or other broad-band radiometric signals depending on distance, illumination, and orbital context."
+    },
+    
+    "tantares_ultraviolet_light_camera": {
+        "situationMask": 63, "situationList": ["SrfLanded", "SrfSplashed", "FlyingLow", "FlyingHigh", "InSpaceLow", "InSpaceHigh"],
+        "biomeMask":     19, "biomeList":     ["SrfLanded", "SrfSplashed", "InSpaceLow"],
+        "requireAtmosphere": false,
+        "description": "Ultraviolet imaging of planetary surfaces using a camera sensitive to reflected and fluorescing UV radiation.",
+        "hints": "Results may reference mineral fluorescence, enhanced surface textures, or UV-dark and UV-bright regions caused by solar radiation. Occasionally, Kerbals may attempt creative or misguided uses of the camera, such as inspecting suit markings, mysterious stains, or unexpectedly glowing objects, leading to mildly humorous observations without breaking scientific context."
+    },
+    
+    "tantares_infrared_light_camera": {
+        "situationMask": 63, "situationList": ["SrfLanded", "SrfSplashed", "FlyingLow", "FlyingHigh", "InSpaceLow", "InSpaceHigh"],
+        "biomeMask":     19, "biomeList":     ["SrfLanded", "SrfSplashed", "InSpaceLow"],
+        "requireAtmosphere": false,
+        "description": "Infrared imaging of planetary surfaces to detect thermal and material contrasts beyond the visible spectrum.",
+        "hints": "Results may describe warm and cold regions, heat retention after sunset, subsurface thermal hints, or contrasts between rock, dust, and ice. Kerbals may also use the camera in unconventional ways—tracking warm footprints, discovering overheated equipment, or noticing that something really should not be that hot—allowing light-hearted or ironic remarks alongside legitimate thermal observations."
+    },
+
+    "tantares_sp_xray_spectrometer": {
+        "situationMask": 48, "situationList": ["InSpaceLow", "InSpaceHigh"],
+        "biomeMask":     16, "biomeList":     ["InSpaceLow"],
+        "requireAtmosphere": false,
+        "description": "An orbital X-ray spectrometer that measures X-ray fluorescence/emission to infer a body's surface elemental makeup. Best used for global-to-regional composition surveys from orbit (low orbit for higher resolution, high orbit for broad averages).",
+        "hints": "Results about orbital X-ray spectra driven by the Sun's illumination: elemental signatures (Fe, Mg, Si, Al, Ca, Ti, S), contrasts between basaltic plains vs feldspathic highlands, metal-rich vs silicate-rich terrains, and low-signal regions (ice, thick dust, weak illumination). InSpaceLow should feel like 'mapping passes' over distinct regions/biomes (composition anomalies, hotspots, impact ejecta, volcanic provinces). InSpaceHigh should summarize global composition trends and hemispheric differences. If the body has an atmosphere, mention absorption/scattering reducing surface signal and biasing toward upper-atmosphere interactions or noisy/weak returns. Allow occasional Kerbal humor: someone mistakes it for a medical X-ray, forgets to close the detector door near the Sun, or celebrates 'finding shiny metals' before mission control reminds them it’s just a spectrum."
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "MCE": {
+        "situationMask": 48, "situationList": ["InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      0, "biomeList":     [],
+        "requireAtmosphere": false,
+        "description": "Integrated suite of instruments monitoring the near-space environment, combining multiple measurements into a unified orbital dataset.",
+        "hints": "Generate broad, survey-style observations of the space environment: radiation background, microgravity conditions, particulate matter, and long-term trends. Results should feel generic, cumulative, and comparative between low and high orbit rather than focused on a single phenomenon."
+    },
+    
+    "SEDA": {
+        "situationMask": 48, "situationList": ["InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      0, "biomeList":     [],
+        "requireAtmosphere": false,
+        "description": "Continuous monitoring of the orbital space environment, recording radiation, energetic particles, and environmental hazards affecting spacecraft and crews.",
+        "hints": "Emphasize space weather, radiation exposure, and transient events (solar activity, particle bursts). Contrast InSpaceLow partial shielding versus InSpaceHigh exposure. Keep the tone operational and hazard-aware, suitable for assessing risks to long-duration missions."
+    }
+}

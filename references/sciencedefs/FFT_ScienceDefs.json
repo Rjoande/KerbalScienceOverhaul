@@ -1,0 +1,61 @@
+{
+    "fftParticleDetector": {
+        "situationMask": 51, "situationList": ["SrfLanded", "SrfSplashed", "FlyingHigh", "InSpaceLow", "InSpaceHigh"],
+        "biomeMask":      3, "biomeList":     ["SrfLanded", "SrfSplashed"],
+        "requireAtmosphere": false,
+        "description": "Detection of gamma radiation to infer elemental composition.",
+        "hints": "Characteristic gamma-ray signatures used to identify elements and surface materials.",
+        "match": "bd_gammaRay",
+
+        "results":{
+            "Sun": {
+                "SunInSpaceLow": [
+                "The sun is putting out so much radiation pressure that you're better off looking elsewhere"
+                ]
+            },
+            "Kerbin": {
+                "KerbinInSpaceLow": [
+                "The detector pings occasionally. You'd have better luck a wee bit higher up."
+                ],
+                "KerbinInSpaceHigh": [
+                "It seems like you might be detecting a few annihilation events."
+                ],
+                "KerbinSrfLanded": [
+                "If there were antimatter here, you'd probably see it. As a fireball."
+                ]
+            },
+            "Moho": {
+                "MohoInSpaceLow": [
+                "Your readout reports that it can't hear much over the roar of the solar wind."
+                ],
+                "MohoInSpaceHigh": [
+                "Your readout reports that it can't hear much over the roar of the solar wind."
+                ]
+            },
+            "Eve": {
+                "EveSrfLanded": [
+                "The thick atmosphere precludes any gamma ray detection."
+                ]
+            },
+            "Jool": {
+                "JoolInSpaceLow": [
+                "There's a veritable jackpot of 0.511 MeV gamma rays coming from a little higher up!"
+                ],
+                "JoolInSpaceHigh": [
+                "The detector reports a number of annihilation events. They're all concentrated down towards that greenish planet, just above its lower local space."
+                ]
+            },
+            "Laythe": {
+                "LaytheInSpaceLow": [
+                "It's confirmed - the magnetic curtains surrounding this world have trapped antiprotons here."
+                ],
+                "LaytheInSpaceHigh": [
+                "Above the magnetic fields, you're not seeing much gamma flux."
+                ],
+                "LaytheSrfLanded": [
+                "The thick atmosphere precludes any gamma ray detection."
+                ]
+            }
+        }
+    }
+}

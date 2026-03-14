@@ -1,0 +1,119 @@
+PROJECT INSTRUCTIONS — JNSQ SCIENCE RESULT GENERATOR (PROJECT FILE)
+
+This document extends and details the core generator instructions.
+It does not override them; it clarifies and expands their application.
+
+--------------------------------------------------
+SECTION A — MASKS, SITUATIONS AND FILTERKEYS
+--------------------------------------------------
+
+Situation semantics and allowed tokens are defined canonically in:
+- experiment_masks_guide.json
+
+Primary data source for each experiment:
+- situationList and biomeList in the experiment definition (*_ScienceDefs).
+
+Fallback logic:
+- If lists are missing or inconsistent with numeric masks, situationMask and biomeMask are decoded using experiment_masks_guide.
+
+Normalization rules (mandatory):
+- Alias tokens:
+  - InSpace → InSpaceLow + InSpaceHigh
+  - Flying → FlyingLow + FlyingHigh
+- A biome suffix is stripped if biomeMask disallows biome-specific results.
+- A filterKey is rejected if:
+  - the body does not exist,
+  - the biome does not exist for that body/situation,
+  - the situation is forbidden by the body.
+
+situationForbidden in jnsq_bodies.json always override experiment masks.
+
+SURFACE BIOME FILTERING (Landed vs Splashed)
+When generating SrfLanded or SrfSplashed filterKeys:
+- Use jnsq_bodies.json biome metadata to decide which biomes are valid on the surface.
+- If a biome defines surfaceSituations, it is eligible only for those situations.
+  Example: a biome with ["SrfSplashed"] is never valid for SrfLanded keys.
+- If surfaceSituations is missing for a biome, treat it as ["SrfLanded"] by default (conservative).
+- Shores/coastal biomes may allow both ["SrfLanded","SrfSplashed"] if desired by the dataset.
+
+--------------------------------------------------
+SECTION B — MAPPINGTYPE SEMANTICS
+--------------------------------------------------
+
+mappingType definitions are authoritative in glossary.json.
+
+Operational meaning:
+- identity: already covered; excluded if valid CSS results exist.
+- merge: multiple source biomes map to one target biome.
+- split / expand / contract / transform: conceptually related, but require adaptation.
+- new: no stock equivalent; generate original results.
+
+mappingType resolution is OUT OF SCOPE for experiment_masks_guide.json.
+
+--------------------------------------------------
+SECTION C — ADAPTING EXISTING RESULTS
+--------------------------------------------------
+
+When adapting CSS results:
+- Preserve tone, length, and core scientific idea.
+- Remove references to landmarks or features not present in the target biome.
+- For merge mappings:
+  - You may reuse multiple source results if non-redundant.
+  - You may blend concepts from multiple sources into new lines.
+
+If source results are incompatible with the target biome or situation,
+fallback to generating new results.
+
+--------------------------------------------------
+SECTION D — GENERATING NEW RESULTS
+--------------------------------------------------
+
+Use:
+- bodyType, environment and biome descriptions (jnsq_bodies.json)
+- experiment description and hints from the experiment definition (*_ScienceDefs)
+- stylistic inspiration from similar experiments on similar bodyTypes
+
+Experiment-specific focus (examples):
+- crewReport: crew observations, conditions, operational notes
+- evaReport: external impressions and emotional reactions
+- mysteryGoo: behavior and “personality” of the Goo
+- surfaceSample: physical and chemical hints of terrain
+- temperatureScan: temperature and subjective reactions
+- barometerScan: pressure and weather
+- gravityScan: mass distribution and anomalies
+
+Mood guidance:
+- Mood entries in glossary.json are suggestive, not prescriptive.
+- Use them to guide tone, never as hard constraints.
+
+--------------------------------------------------
+SECTION E — STYLE RULES
+--------------------------------------------------
+
+- 1–2 sentences per result line.
+- Light humor or dry science in Kerbal style.
+- No real-world celestial references.
+- Occasional in-universe character references are allowed:
+  Permitted characters include:
+  - Jebediah (Jeb) Kerman — pilot
+  - Valentina (Val) Kerman — female pilot
+  - Bill Kerman — engineer
+  - Bob Kerman — scientist
+  - Gene Kerman — Mission Control
+  - Wernher von Kerman — R&D
+  Do not invent additional named characters.
+- Avoid repetition across results for the same filterKey.
+
+--------------------------------------------------
+SECTION F — OUTPUT RULES
+--------------------------------------------------
+
+Output must be a valid ModuleManager CFG patch:
+- Correct syntax
+- One space around '='
+- Each result line ends with '* = <text>'
+- No comments or explanations unless explicitly requested.
+
+--------------------------------------------------
+END OF PROJECT FILE
+--------------------------------------------------

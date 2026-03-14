@@ -1,0 +1,223 @@
+{
+  "physicalMagnitude": {
+    "none": {
+      "definition": "No measurable value for the given quantity. Effectively zero in all practical senses.",
+      "examples": [
+        "No intrinsic magnetic field (the body does not generate its own magnetosphere).",
+        "No atmospheric pressure at the surface (airless bodies like the Moon or Phobos)."
+      ]
+    },
+    "near-zero": {
+      "definition": "Extremely weak value, barely above none. Only detectable with sensitive instruments.",
+      "examples": [
+        "Mercury’s weak magnetic field (~1% of Earth’s).",
+        "Residual, almost negligible radiation away from belts in deep space.",
+        "Very thin exosphere that has no practical effect on flight or weather."
+      ]
+    },
+    "low": {
+      "definition": "Below Kerbin/Earth-like levels, but clearly present and relevant to instruments and gameplay.",
+      "examples": [
+        "Thin Martian-like atmosphere.",
+        "Weak but non-negligible radiation environment.",
+        "Low gravity that noticeably affects movement and landing (small moons)."
+      ]
+    },
+    "normal": {
+      "definition": "Comparable to Kerbin/Earth for that quantity, or the local reference level in the game.",
+      "examples": [
+        "Kerbin-like surface gravity and pressure.",
+        "Radiation environment where shielding is helpful but not critical.",
+        "Temperatures compatible with long-term operations using standard equipment."
+      ]
+    },
+    "high": {
+      "definition": "Clearly above typical Kerbin/Earth levels. Hazardous or very demanding, but survivable with proper protection.",
+      "examples": [
+        "Dense atmospheres that strongly affect reentry and aerobraking.",
+        "Powerful magnetic environments near gas giants.",
+        "Radiation belts that require dedicated shielding for long stays."
+      ]
+    },
+    "extreme": {
+      "definition": "Out-of-scale values for the given quantity, beyond what Kerbals consider survivable without heavy or specialized protection.",
+      "examples": [
+        "Jupiter-like radiation belts or Io’s local environment.",
+        "Venus-like surface temperature and pressure.",
+        "Stellar corona temperatures or intense stellar radiation near a star."
+      ]
+    }
+  },
+
+  "surfaceSituations": {
+    "definition": "Per-biome whitelist of valid surface situations for that biome when generating filterKeys.",
+    "values": {
+      "SrfLanded": "Biome can be used for landed surface results.",
+      "SrfSplashed": "Biome can be used for splashed surface results."
+    },
+    "notes": [
+      "If missing, treat as SrfLanded-only by default.",
+      "Coastal biomes may allow both."
+    ]
+  },
+
+  "mappingType": {
+    "identity": {
+      "definition": "The JNSQ biome corresponds directly to a single stock biome with the same meaning and role.",
+      "hints": [
+        "Reuse stock or CSS text with minimal changes.",
+        "You may adjust scale references, but not the core idea of the biome.",
+        "Avoid adding new strong themes that were not present in the stock version."
+      ]
+    },
+    "merge": {
+      "definition": "Multiple stock biomes are merged into a single JNSQ biome.",
+      "hints": [
+        "Focus on elements common to all source biomes.",
+        "Remove references to very specific landmarks tied to a single original biome.",
+        "Use generic wording that fits all merged regions (shared terrain type, lighting, altitude, etc.)."
+      ]
+    },
+    "split": {
+      "definition": "One stock biome is split into several JNSQ biomes, usually based on region or orientation.",
+      "hints": [
+        "Preserve the core flavor of the original stock biome.",
+        "Introduce subtle differences based on direction or region (north/south, inner/outer, high/low latitude).",
+        "Avoid contradicting the original biome’s nature; refine it rather than replace it."
+      ]
+    },
+    "expand": {
+      "definition": "A specific stock biome is generalized into a broader JNSQ biome.",
+      "hints": [
+        "Start from the focused stock concept and broaden it to cover a wider area or more varied terrain.",
+        "Keep references that still make sense at larger scale (e.g., mountain chains instead of a single peak).",
+        "Avoid overly local details; think in terms of region rather than isolated features."
+      ]
+    },
+    "contract": {
+      "definition": "A generic stock biome is specialized into a more specific JNSQ biome.",
+      "hints": [
+        "Begin from a broad stock idea (e.g., Shores) and narrow it down (e.g., Shallows, Cliffs, Coves).",
+        "Add distinctive details that justify the new specificity (geometry, color, hazards, local phenomena).",
+        "Keep the original biome’s tone but sharpen it around a particular sub-feature."
+      ]
+    },
+    "transform": {
+      "definition": "The JNSQ biome is inspired by the stock biome but changes its nature, context, or scale.",
+      "hints": [
+        "Maintain a loose thematic connection (e.g., erosion, depth, isolation) without copying the original setting.",
+        "Adapt imagery to the new feature type (Canyons → Trenches, Craters → Rifts, etc.).",
+        "Avoid direct references to stock-only geography; treat this as a reinterpretation rather than a 1:1 port."
+      ]
+    },
+    "new": {
+      "definition": "The JNSQ biome has no meaningful stock equivalent and must be treated as a fully original location.",
+      "hints": [
+        "Rely on bodyType, physical data and mood instead of stock text.",
+        "Establish a clear, distinctive identity for the biome (visuals, hazards, science interest).",
+        "Use consistent internal logic so that multiple experiments tell a coherent story about this place."
+      ]
+    }
+  },
+
+  "mood": {
+    "_note": "Mood is suggestive, not prescriptive. Use it to guide tone, not as a hard constraint.",
+    "homey": {
+      "definition": "Comfortable, familiar, and relatively safe. The place feels like a natural home or a stable base.",
+      "typicalUse": [
+        "Kerbin-like worlds or long-established colonies.",
+        "Large, well-equipped stations or surface bases.",
+        "Regions with moderate conditions and reliable infrastructure."
+      ]
+    },
+    "serendipity": {
+      "definition": "Unexpected pleasant discoveries, lucky findings and surprising details that reward curiosity.",
+      "typicalUse": [
+        "Worlds with hidden oceans, geysers, or unusual chemistry.",
+        "Biomes where exploration often reveals more than mission planners expected.",
+        "Science results that emphasize happy accidents and small delights."
+      ]
+    },
+    "frontier": {
+      "definition": "Edge-of-exploration feeling: first steps into the unknown, rough but exciting and full of promise.",
+      "typicalUse": [
+        "Early missions to new planets or moons.",
+        "Sparse outposts and improvised landing sites.",
+        "Biomes that look challenging but not overtly lethal."
+      ]
+    },
+    "colonization": {
+      "definition": "Long-term settlement mindset: building infrastructure, making the place livable and sustainable.",
+      "typicalUse": [
+        "Targets suitable for bases, agriculture or resource extraction.",
+        "Biomes that support repeated missions and logistical routes.",
+        "Science results that reference planning, construction and routine work."
+      ]
+    },
+    "far-from-home": {
+      "definition": "Strong sense of distance, isolation and separation from Kerbin and familiar space.",
+      "typicalUse": [
+        "Outer system objects and long-travel destinations.",
+        "Deep-space orbits far beyond the home system.",
+        "Biomes or situations where delay, solitude and remoteness are emphasized."
+      ]
+    },
+    "epic": {
+      "definition": "Grand, awe-inspiring and monumental. The place or situation feels like a major achievement or historic milestone.",
+      "typicalUse": [
+        "Gas giants, massive storms, ring systems and dramatic vistas.",
+        "First landings on iconic targets or record-breaking missions.",
+        "Science results that highlight scale, difficulty and significance."
+      ]
+    },
+    "primal": {
+      "definition": "Raw, elemental forces at work: volcanism, tides, extreme geology or very young surfaces.",
+      "typicalUse": [
+        "Volcanic moons, tectonically active worlds, and lava plains.",
+        "Biomes shaped by intense heat, tides, or constant resurfacing.",
+        "Results that emphasize raw power, violence and dynamic change."
+      ]
+    },
+    "hostile": {
+      "definition": "Actively dangerous to Kerbals: high radiation, crushing pressure, toxic atmospheres or lethal temperatures.",
+      "typicalUse": [
+        "Venus-like worlds and gas giant deeper layers.",
+        "Strong radiation belts and highly irradiated moons.",
+        "Biomes where survival requires heavy shielding or very short stays."
+      ]
+    },
+    "barren": {
+      "definition": "Empty, dry, lifeless and often repetitive. Little comfort and few signs of activity.",
+      "typicalUse": [
+        "Airless moons, many asteroids, cratered highlands and dust plains.",
+        "Regions with minimal visual variety and no visible atmosphere or water.",
+        "Science results that highlight scarcity, dust, and silence."
+      ]
+    },
+    "eerie": {
+      "definition": "Unsettling and uncanny. The place feels off or uncanny even if immediate danger is not obvious.",
+      "typicalUse": [
+        "Dimly lit surfaces, unusual color schemes or stark contrasts.",
+        "Biomes with strange patterns, shadows, or unexplained features.",
+        "Results that hint at unease, quiet tension or “something not quite right”."
+      ]
+    },
+    "mysterious": {
+      "definition": "Strong sense of unknown structure or hidden depth. The place suggests secrets and unanswered questions.",
+      "typicalUse": [
+        "Oceans under ice, subsurface structures, unusual spectra or anomalies.",
+        "Outer system objects with little data and surprising measurements.",
+        "Science logs that raise questions rather than giving clear answers."
+      ]
+    }
+  },
+
+  "situation": {
+    "SrfLanded": "The vessel is resting on solid ground or terrain, not floating, flying or in orbit.",
+    "SrfSplashed": "The vessel is floating or partially submerged on a liquid surface, such as an ocean or lake.",
+    "FlyingLow": "The vessel is flying within the lower atmosphere, below the high-altitude threshold defined for the body.",
+    "FlyingHigh": "The vessel is flying in the upper atmosphere, above the low-altitude threshold but still not in space.",
+    "InSpaceLow": "The vessel is in low orbit around the body, inside the low-space altitude threshold.",
+    "InSpaceHigh": "The vessel is in high orbit around the body, outside the low-space altitude threshold and closer to interplanetary space."
+  }
+}

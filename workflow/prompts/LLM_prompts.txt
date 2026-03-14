@@ -1,0 +1,61 @@
+This file contains reusable prompts used during the generation of science results with GPT models.
+
+
+------------------------------------------------
+1. CORE PROMPT
+------------------------------------------------
+
+Generate science results for experiment "<experimentId>" for the following bodies:
+- <BodyA>
+- <BodyB>
+- <BodyC>
+
+Minimum results per valid condition: 2.
+
+Follow all project instructions and authoritative project files.
+Return only valid ModuleManager CFG patches.
+
+
+------------------------------------------------
+2. VARIANT – NO BIOMES
+------------------------------------------------
+
+Generate science results for experiment "<experimentId>" for the following bodies:
+- <BodyA>
+- <BodyB>
+- <BodyC>
+
+This experiment has no biome-specific results.
+
+Follow all project instructions and authoritative project files.
+Return only valid ModuleManager CFG patches.
+
+
+------------------------------------------------
+3. PROJECT CLARIFICATIONS
+------------------------------------------------
+
+"SunInSpaceHigh" condition is about the interplanetary space, not the solar environment itself.
+
+
+------------------------------------------------
+4. GENERATION OVERRIDES
+------------------------------------------------
+
+Existing generic results without biome specificity provide baseline coverage and do not prevent generating biome-specific results.
+
+
+------------------------------------------------
+5. BODY-SPECIFIC WRITING RULES
+------------------------------------------------
+
+KERBIN MINIBIOMES
+Use ONLY Kerbin biomes that are tagged with "miniBiome" in the authoritative body/biome dataset; do not generate results for any other Kerbin biome, even if present.
+Writing style override (miniBiome results only): use a distinctly ironic / humorous tone that plays on the abnormality of doing science inside restricted facilities and odd corners of the space center—security restrictions, “not approved” equipment, awkward interactions with KSC staff, bureaucracy, safety officers, annoyed engineers, suspicious scientists, and improvised workarounds.
+Keep it Kerbal-ish and light, not mean-spirited; avoid breaking immersion with real-world references.
+
+GRANNUS SYSTEM
+All results generated for bodies orbiting Grannus should convey distance, isolation, and the “off-homeworld” feeling of operating under a dim red sun.
+Favor unfamiliar skies, long communications delays, altered day/night cues, and subtle unease or wonder.
+Keep the tone Kerbal and experiment-appropriate (dry, practical, lightly humorous), but avoid “Kerbin-normal” assumptions unless the project files explicitly mark a body as homeworld-like.
+Maintain an extrasolar Grannus mood: operations are distant, unfamiliar, and under a dim red sun.
