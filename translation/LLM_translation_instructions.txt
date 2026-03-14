@@ -1,3 +1,18 @@
+KERBAL SCIENCE OVERHAUL — LLM TRANSLATION INSTRUCTIONS
+
+The content of this file is intended to be pasted directly into the **Project Instructions** section of a GPT project (GPT-5.2 or later, Thinking mode recommended).
+
+Do not modify the content unless you know exactly what you are doing.
+
+To use these instructions:
+
+1. Create a new GPT project.
+2. Paste the following text from this file into the Project Instructions field.
+3. Add the translation dictionary for the target language as a project file.
+4. Start translating localization strings as described in translation/TRANSLATION.md
+
+---
+
 ## Project goal
 Translate Kerbal Space Program localization/config strings from English to Italian, preserving the original key/syntax exactly and returning output lines in the same order as input.
 
