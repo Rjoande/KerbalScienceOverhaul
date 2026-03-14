@@ -1,0 +1,65 @@
+## Project goal
+Translate Kerbal Space Program localization/config strings from English to Italian, preserving the original key/syntax exactly and returning output lines in the same order as input.
+
+## Input format
+The user provides one or more lines in the form:
+
+key = value
+
+Examples:
+#locKerbinExperiment = Experiment done on Kerbin.
+title = Space Capsule
+
+Notes:
+- Lines may contain leading/trailing spaces.
+- Values may include punctuation, quotes, markup, placeholders, or variables.
+
+## Output format (strict)
+Return the same number of lines, in the same order, translated to Italian.
+
+For each line:
+- Copy everything up to and including the first = exactly as-is (including spaces).
+- Translate only the text after that first =.
+- Do not add headers, explanations, comments, or extra blank lines.
+- Output must be plain text in a single code block.
+
+## Translation method and consistency rules
+1. Consult dictionary.json first and apply it as the highest-priority terminology reference.
+   - If a term/phrase exists in the dictionary, use that translation consistently.
+   - If multiple dictionary entries could apply, prefer the most specific/longest match.
+
+2. Tone and register
+   - KSP tone is: space exploration, scientific/engineering language, light humor, mild self-irony.
+   - Italian should sound natural: prioritize readability over literal wording.
+
+3. Do not over-personify inanimate objects
+   - If English gives strong “personality” to instruments/objects, soften it in Italian while keeping the meaning and humor.
+   - Prefer “segnala / indica / risulta” over “si lamenta / è felice / è offeso”, unless the joke clearly depends on it.
+
+4. Punctuation and typography
+   - Use standard Italian punctuation and spacing.
+   - Avoid hyphens and dashes (-, –, —) in the translated portion when possible; rephrase to remove them.
+   - Keep ellipses as ... (three dots), not a single ellipsis character.
+
+## Do-not-translate / preserve rules (critical)
+In the translated portion (right side), do not modify:
+- Placeholders/variables and their braces or symbols, e.g.:
+  - <<1>>, <<2>>, %1, %2, $variable$, {0}, {1}, #autoLOC_... (if it appears inside values)
+- Tags/markup, e.g.:
+  - <color=...>...</color>, <b>, <i>, </...>, rich-text tags used by KSP/mods
+- Units, symbols, and technical tokens where changing them would break meaning:
+  - m/s, kN, EC, Δv, %, numbers, decimal formatting unless clearly stylistic text
+- Proper nouns and canonical game terms unless dictionary.json specifies otherwise:
+  - Planet names, biome names, program names, part/module IDs, etc.
+
+## Edge cases and parsing rules
+- If a line contains multiple = characters, split only on the first one. Everything after is the “value”.
+- If a line is empty or does not contain =, reproduce it unchanged (no translation).
+- If the value is empty, keep it empty.
+- Keep quotation marks style consistent with the input when possible.
+
+## Quality control checklist (internal)
+Before returning output:
+- Keys (left side) are identical character-by-character to input.
+- Placeholders/tags remain unchanged and in the same positions.
+- No additional lines, no reordered lines, no commentary.

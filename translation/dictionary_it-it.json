@@ -1,0 +1,1188 @@
+{
+  "glossary_metadata": {
+    "source_lang": "en",
+    "target_lang": "it",
+    "version": "0.9"
+  },
+  "entries": {
+    "technical_terms": {
+      "kerbal": {
+        "term": "kerbal",
+        "class": "noun.common",
+        "is_adjective_capable": true,
+        "translation": "kerbal",
+        "grammar": {
+          "gender": "neuter",
+          "number_flexion": {
+            "singular": "kerbal",
+            "plural": "kerbal"
+          },
+          "is_epicene": true,
+          "notes": "Invariabile in genere e in numero. Non aggiungere mai 's' o desinenze italiane. Traduci sempre con l'iniziale minuscola."
+        },
+        "context_rules": "Umanoidi verdi originari del pianeta Kerbin. Può riferirsi ai singoli individui, alla specie intera, o come aggettivo."
+      },
+      "kerbonaut": {
+        "term": "kerbonaut",
+        "class": "noun.common",
+        "is_adjective_capable": false,
+        "translation": "kerbonauta",
+        "grammar": {
+          "gender": "neuter",
+          "number_flexion": {
+            "singular": "kerbonauta",
+            "plural": "kerbonauti"
+          },
+          "is_epicene": true
+        },
+        "context_rules": "Sinonimo di 'astronauta'. Un [[kerbal]] astronauta."
+      },
+      "badass": {
+        "term": "badass",
+        "class": "noun.common",
+        "is_adjective_capable": true,
+        "translation": "ganzo",
+        "grammar": {
+          "is_epicene": false
+        }
+      },
+      "ribbon": {
+        "term": "ribbon",
+        "class": "noun.common",
+        "is_adjective_capable": false,
+        "translation": "medaglia",
+        "grammar": {
+          "gender": "feminine"
+        }
+      },
+      "goo": {
+        "term": "goo",
+        "class": "noun.common",
+        "is_adjective_capable": false,
+        "translation": "melma",
+        "grammar": {
+          "gender": "feminine",
+          "is_invariant": true,
+          "is_epicene": true
+        },
+        "context_rules": "Generalmente riferito alla Melma Misteriosa (Mystery Goo)."
+      },
+      "SrfSplashed": {
+        "term": "splashed",
+        "class": "phrase.prepositional",
+        "translation": "ammarato"
+      },
+      "FlyingLow": {
+        "term": "flying low",
+        "class": "phrase.prepositional",
+        "translation": "nell'atmosfera inferiore"
+      },
+      "FlyingHigh": {
+        "term": "flying high",
+        "class": "phrase.prepositional",
+        "translation": "nell'atmosfera superiore"
+      },
+      "InSpaceLow": {
+        "term": "in space low",
+        "class": "phrase.prepositional",
+        "translation": ["nello spazio proprio sopra", "nello spazio inferiore", "in orbita bassa"]
+      },
+      "InSpaceHigh": {
+        "term": "in space high",
+        "class": "phrase.prepositional",
+        "translation": ["nello spazio superiore", "in orbita alta"]
+      },
+      "kerbal_space_center": {
+        "term": "Kerbal Space Center",
+        "class": "noun.proper",
+        "translation": "Centro Spaziale Kerbal",
+        "grammar": {
+          "gender": "masculine",
+          "number": "singular"
+        },
+        "context_rules": "Sede del programma spaziale su Kerbin. Tradurre sempre con iniziali maiuscole."
+      },
+      "ksc": {
+        "term": "KSC",
+        "class": "noun.acronym",
+        "translation": "CSK",
+        "grammar": {
+          "gender": "masculine"
+        },
+        "refers_to": "kerbal_space_center"
+      },
+      "ksc_VehicleAssembyBuilding": {
+        "term": "Vehicle Assembly Building",
+        "class": "noun.proper",
+        "translation": "Edificio Assemblaggio Veicoli",
+        "grammar": {
+          "gender": "masculine",
+          "number": "singular"
+        },
+        "context_rules": "Edificio del [[kerbal_space_center]] in cui vengono assemblati razzi e altri veicoli spaziali. Traduci sempre con tutte le iniziali maiuscole."
+      },
+      "ksc_vab": {
+        "term": "VAB",
+        "class": "noun.acronym",
+        "translation": "EAV",
+        "grammar": {
+          "gender": "masculine"
+        },
+        "refers_to": "ksc_VehicleAssembyBuilding"
+      },
+      "ksc_SpaceplaneHangar": {
+        "term": "Spaceplane Hangar",
+        "class": "noun.proper",
+        "translation": "hangar degli spazioplani",
+        "grammar": {
+          "gender": "masculine",
+          "number": "singular"
+        },
+        "context_rules": "Edificio del [[kerbal_space_center]] in cui vengono assemblati aerei e spazioplani."
+      },
+      "ksc_sph": {
+        "term": "SPH",
+        "class": "noun.acronym",
+        "translation": "SPH",
+        "grammar": {
+          "gender": "masculine"
+        },
+        "refers_to": "ksc_SpaceplaneHangar"
+      },
+      "ksc_LaunchPad": {
+        "term": "Launch Pad",
+        "class": "noun.proper",
+        "translation": "piattaforma di lancio",
+        "grammar": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "context_rules": "Luogo del [[kerbal_space_center]] da cui vengono lanciato i razzi. Tratta come 'noun.common' se nel testo originale compare in minuscolo. Traduci sempre e comunque con iniziali minuscole."
+      },
+      "ksc_Runaway": {
+        "term": "Runaway",
+        "class": "noun.proper",
+        "translation": "pista",
+        "grammar": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "context_rules": "Luogo del [[kerbal_space_center]] su cui decollano e/o atterrano aerei e spazioplani. Tratta come 'noun.common' se nel testo originale compare in minuscolo. Traduci sempre e comunque con iniziali minuscole."
+      },
+      "ksc_TrackingStation": {
+        "term": "Tracking Station",
+        "class": "noun.proper",
+        "translation": "stazione di tracciamento",
+        "grammar": {
+          "gender": "masculine",
+          "number": "singular"
+        },
+        "context_rules": "Edificio del [[kerbal_space_center]] da cui vengono monitorate tutte le missiono attive."
+      },
+      "ksc_AstronautComplex": {
+        "term": "Astronaut Complex",
+        "class": "noun.proper",
+        "translation": "complesso degli astronauti",
+        "grammar": {
+          "gender": "masculine",
+          "number": "singular"
+        },
+        "context_rules": "Edificio del [[kerbal_space_center]], centro di addestramento e residenza dei [[kerbonaut]]. Traduci sempre con iniziali maiuscole."
+      },
+      "ksc_ResearchAndDevelopment": {
+        "term": "Research and Development",
+        "class": "noun.proper",
+        "translation": "Ricerca e Sviluppo",
+        "grammar": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "context_rules": "Edificio e dipartimento del [[kerbal_space_center]] dove vengono analizzati i risultati degli esperimenti e sviluppate nuove tecnologie. Traduci sempre con iniziali maiuscole."
+      },
+      "ksc_RnD": {
+        "term": "R&D",
+        "class": "noun.acronym",
+        "translation": "R&S",
+        "grammar": {
+          "gender": "feminine"
+        },
+        "refers_to": "ksc_ResearchAndDevelopment"
+      },
+      "ksc_Crawlerway": {
+        "term": "Crawlerway",
+        "class": "noun.proper",
+        "translation": "pista di trasporto",
+        "grammar": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "context_rules": "Pista del [[kerbal_space_center]] su cui vengono trasportati i veicoli assemblati nel [[ksc_VehicleAssembyBuilding]] fino alla [[ksc_LaunchPad]]."
+      }
+    },
+
+    "characters": {
+      "_defaults": { "class": "noun.proper.person", "is_invariant": true },
+      "jebediah_kerman": { 
+        "term": "Jebediah Kerman", 
+        "gender": "masculine", 
+        "nicknames": ["Jebediah", "Jeb"] 
+      },
+      "valentina_kerman": { 
+        "term": "Valentina Kerman", 
+        "gender": "feminine", 
+        "nicknames": ["Valentina", "Val"] 
+      },
+      "bill_kerman": {
+        "term": "Bill Kerman",
+        "gender": "masculine",
+        "nicknames": ["Bill"]
+      },
+      "bob_kerman": {
+        "term": "Bob Kerman",
+        "gender": "masculine",
+        "nicknames": ["Bob"]
+      },
+      "gene_kerman": {
+        "term": "Gene Kerman",
+        "gender": "masculine",
+        "nicknames": ["Gene"]
+      },
+      "Wernher_von_Kerman": {
+        "term": "Wernher von Kerman",
+        "gender": "masculine",
+        "nicknames": ["Wernher"]
+      }
+    },
+    
+    "celestial_bodies": {
+      "_defaults": {
+        "class": "noun.proper.planet",
+        "is_invariant": true,
+        "usage": "In italiano non si usa mai l'articolo davanti al nome proprio di un corpo celeste, anche se presente nel testo originale."
+      },
+      "sun":    { "term": "Sun", "translation": "Sole", "gender": "masculine" },
+      "kerbol": { "term": "Kerbol",   "gender": "masculine" },
+      "moho":   { "term": "Moho",     "gender": "masculine" },
+      "eve":    { "term": "Eve",      "gender": "feminine" },
+      "gilly":  { "term": "Gilly",    "gender": "feminine" },
+      "kerbin": { "term": "Kerbin",   "gender": "feminine" },
+      "mun":    { "term": "Mun",      "gender": "feminine" },
+      "minmus": { "term": "Minmus",   "gender": "feminine" },
+      "duna":   { "term": "Duna",     "gender": "masculine" },
+      "ike":    { "term": "Ike",      "gender": "feminine" },
+      "edna":   { "term": "Edna",     "gender": "masculine" },
+      "dak":    { "term": "Dak",      "gender": "feminine" },
+      "dres":   { "term": "Dres",     "gender": "masculine" },
+      "jool":   { "term": "Jool",     "gender": "masculine" },
+      "laythe": { "term": "Laythe",   "gender": "feminine" },
+      "vall":   { "term": "Vall",     "gender": "feminine" },
+      "tylo":   { "term": "Tylo",     "gender": "feminine" },
+      "bop":    { "term": "Bop",      "gender": "feminine" },
+      "pol":    { "term": "Pol",      "gender": "feminine" },
+      "lindor": { "term": "Lindor",   "gender": "masculine" },
+      "krel":   { "term": "Krel",     "gender": "feminine" },
+      "aden":   { "term": "Aden",     "gender": "feminine" },
+      "huygen": { "term": "Huygen",   "gender": "feminine" },
+      "riga":   { "term": "Riga",     "gender": "feminine" },
+      "talos":  { "term": "Talos",    "gender": "feminine" },
+      "eeloo":  { "term": "Eeloo",    "gender": "masculine" },
+      "celes":  { "term": "Celes",    "gender": "feminine" },
+      "tam":    { "term": "Tam",      "gender": "feminine" },
+      "hamek":  { "term": "Hamek",    "gender": "masculine" },
+      "nara":   { "term": "Nara",     "gender": "masculine" },
+      "amos":   { "term": "Amos",     "gender": "feminine" },
+      "enon":   { "term": "Enon",     "gender": "feminine" },
+      "prax":   { "term": "Prax",     "gender": "feminine" },
+      "grannus":   { "term": "Grannus",   "gender": "masculine" },
+      "taranis":   { "term": "Taranis",   "gender": "masculine" },
+      "toutatis":  { "term": "Toutatis",  "gender": "masculine" },
+      "nodens":    { "term": "Nodens",    "gender": "masculine" },
+      "belisama":  { "term": "Belisama",  "gender": "feminine" },
+      "sucellus":  { "term": "Sucellus",  "gender": "masculine" },
+      "caireen":   { "term": "Caireen",   "gender": "feminine" },
+      "Sirona":    { "term": "Sirona",    "gender": "masculine" },
+      "airmed":    { "term": "Airmed",    "gender": "feminine" },
+      "borvo":     { "term": "Borvo",     "gender": "feminine" },
+      "damona":    { "term": "Damona",    "gender": "feminine" },
+      "epona":     { "term": "Epona",     "gender": "masculine" },
+      "rosmerta":  { "term": "Rosmerta",  "gender": "feminine" },
+      "rab-58e":   { "term": "RAB-58E",   "gender": "feminine" },
+      "cernunnos": { "term": "Cernunnos", "gender": "masculine" }
+    },
+    "biomes": {
+      "_defaults": {
+        "class": "noun.common",
+        "usage": "In italiano i nomi dei biomi devono rispettare la capitalizzazione di questo dizionario, indipendentemente da come appaiono nel testo originale."
+      },
+      "AkatsukiLake": {
+        "term": "Akatsuki Lake", 
+        "translation": "lago Akatsuki",
+        "gender": "masculine", "number": "singular"
+      },
+      "BabbagePatch": {
+        "term": "Babbage Patch", 
+        "translation": "campo di Babbage",
+        "gender": "masculine", "number": "singular"
+      },
+      "Badlands": {
+        "term": "Badlands", 
+        "translation": "calanchi",
+        "gender": "masculine", "number": "plural"
+      },
+      "Canyon": {
+        "term": "Canyon", 
+        "translation": "canyon",
+        "gender": "masculine", "number": "singular"
+      },
+      "Canyons": {
+        "term": "Canyons", 
+        "translation": "canyon",
+        "gender": "masculine", "number": "plural"
+      },
+      "CentralLowlands": {
+        "term": "Central Lowlands", 
+        "translation": "depressioni centrali",
+        "gender": "masculine", "number": "plural"
+      },
+      "CentralMountainRange": {
+        "term": "Central Mountain Range", 
+        "translation": "catena montuosa centrale",
+        "gender": "feminine", "number": "singular"
+      },
+      "CraterBay": {
+        "term": "Crater Bay", 
+        "translation": "baia del cratere",
+        "gender": "feminine", "number": "singular"
+      },
+      "CraterIsland": {
+        "term": "Crater Island", 
+        "translation": "isola del cratere",
+        "gender": "feminine", "number": "singular"
+      },
+      "CraterLake": {
+        "term": "Crater Lake", 
+        "translation": "lago del cratere",
+        "gender": "masculine", "number": "singular"
+      },
+      "CrescentBay": {
+        "term": "Crescent Bay", 
+        "translation": "baia Mezzaluna",
+        "gender": "feminine", "number": "singular"
+      },
+      "DegrasseSea": {
+        "term": "Degrasse Sea", 
+        "translation": "mar Degrasse",
+        "gender": "masculine", "number": "singular"
+      },
+      "EastCrater": {
+        "term": "East Crater", 
+        "translation": "cratere orientale",
+        "gender": "masculine", "number": "singular"
+      },
+      "EastFarsideCrater": {
+        "term": "East Farside Crater", 
+        "translation": "cratere Facciaoscura orientale",
+        "gender": "masculine", "number": "singular"
+      },
+      "EasternCanyon": {
+        "term": "Eastern Canyon", 
+        "translation": "canyon orientale",
+        "gender": "masculine", "number": "singular"
+      },
+      "EasternMountainRidge": {
+        "term": "Eastern Mountain Ridge", 
+        "translation": "dorsale montuosa orientale",
+        "gender": "feminine", "number": "singular"
+      },
+      "ExplodiumSea": {
+        "term": "Explodium Sea", 
+        "translation": "mare Explodium",
+        "gender": "masculine", "number": "singular"
+      },
+      "FarsideBasin": {
+        "term": "Farside Basin", 
+        "translation": "bacino Facciaoscura",
+        "gender": "masculine", "number": "singular"
+      },
+      "FarsideCrater": {
+        "term": "Farside Crater", 
+        "translation": "cratere Facciaoscura",
+        "gender": "masculine", "number": "singular"
+      },
+      "Flats": {
+        "term": "Flats", 
+        "translation": "terreni piatti",
+        "gender": "masculine", "number": "plural"
+      },
+      "Foothills": {
+        "term": "Foothills", 
+        "translation": "pendici",
+        "gender": "feminine", "number": "plural"
+      },
+      "Fragipan": {
+        "term": "Fragipan", 
+        "translation": "fragipan",
+        "gender": "masculine", "number": "singular"
+      },
+      "GagarinCrater": {
+        "term": "Gagarin Crater", 
+        "translation": "cratere Gagarin",
+        "gender": "masculine", "number": "singular"
+      },
+      "GalileioCrater": {
+        "term": "Galileio Crater", 
+        "translation": "cratere Galileio",
+        "gender": "masculine", "number": "singular"
+      },
+      "Grasslands": {
+        "term": "Grasslands", 
+        "translation": "prateria",
+        "gender": "feminine", "number": "singular"
+      },
+      "GreatFlats": {
+        "term": "Great Flats", 
+        "translation": "terreni più piatti",
+        "gender": "masculine", "number": "plural"
+      },
+      "GrissomCrater": {
+        "term": "Grissom Crater", 
+        "translation": "cratere Grissom",
+        "gender": "masculine", "number": "singular"
+      },
+      "HighlandCraters": {
+        "term": "Highland Craters", 
+        "translation": "crateri nelle colline",
+        "gender": "masculine", "number": "plural"
+      },
+      "IceCanyons": {
+        "term": "Ice Canyons", 
+        "translation": "canyon ghiacciati",
+        "gender": "masculine", "number": "plural"
+      },
+      "IceCaps": {
+        "term": "Ice Caps", 
+        "translation": "calotte ghiacciate",
+        "gender": "feminine", "number": "plural"
+      },
+      "ImpactCraters": {
+        "term": "Impact Craters", 
+        "translation": "crateri da impatto",
+        "gender": "masculine", "number": "plural"
+      },
+      "ImpactEjecta": {
+        "term": "Impact Ejecta", 
+        "translation": "piroclasti da impatto",
+        "gender": "masculine", "number": "plural"
+      },
+      "LesserFlats": {
+        "term": "Lesser Flats", 
+        "translation": "terreni abbastanza piatti",
+        "gender": "masculine", "number": "plural"
+      },
+      "MidlandCanyons": {
+        "term": "Midland Canyons", 
+        "translation": "canyon delle pianure",
+        "gender": "masculine", "number": "plural"
+      },
+      "MidlandCraters": {
+        "term": "Midland Craters", 
+        "translation": "crateri delle pianure",
+        "gender": "masculine", "number": "plural"
+      },
+      "MidlandSea": {
+        "term": "Midland Sea", 
+        "translation": "mare centrale",
+        "gender": "masculine", "number": "singular"
+      },
+      "GreaterFlats": {
+        "term": "Greater Flats", 
+        "translation": "terreni piattissimi",
+        "gender": "masculine", "number": "plural"
+      },
+      "MinorCraters": {
+        "term": "Minor Craters", 
+        "translation": "crateri minori",
+        "gender": "masculine", "number": "plural"
+      },
+      "MuGlacier": {
+        "term": "Mu Glacier", 
+        "translation": "ghiacciaio Mu",
+        "gender": "masculine", "number": "singular"
+      },
+      "NortheastBasin": {
+        "term": "Northeast Basin", 
+        "translation": "bacino nord-orientale",
+        "gender": "masculine", "number": "singular"
+      },
+      "NorthernGlaciers": {
+        "term": "Northern Glaciers", 
+        "translation": "ghiacciai boreali",
+        "gender": "masculine", "number": "plural"
+      },
+      "NorthernIceShelf": {
+        "term": "Northern Ice Shelf", 
+        "translation": "tavolato di ghiaccio boreale",
+        "gender": "masculine", "number": "singular"
+      },
+      "NorthernShelf": {
+        "term": "Northern Shelf", 
+        "translation": "tavolato boreale",
+        "gender": "masculine", "number": "singular"
+      },
+      "NorthernSinkhole": {
+        "term": "Northern Sinkhole", 
+        "translation": "dolina settentrionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "NorthernSinkholeRidge": {
+        "term": "Northern Sinkhole Ridge", 
+        "translation": "catena settentrionale di doline",
+        "gender": "feminine", "number": "singular"
+      },
+      "NorthwestBasin": {
+        "term": "Northwest Basin", 
+        "translation": "bacino nord-occidentale",
+        "gender": "masculine", "number": "singular"
+      },
+      "NorthwestCrater": {
+        "term": "Northwest Crater", 
+        "translation": "cratere nord-occidentale",
+        "gender": "masculine", "number": "singular"
+      },
+      "Olympus": {
+        "term": "Olympus", 
+        "translation": "Olimpo",
+        "gender": "masculine", "number": "singular"
+      },
+      "Peaks": {
+        "term": "Peaks", 
+        "translation": "picchi",
+        "gender": "masculine", "number": "plural"
+      },
+      "PolarCrater": {
+        "term": "Polar Crater", 
+        "translation": "cratere polare",
+        "gender": "masculine", "number": "singular"
+      },
+      "PolarCraters": {
+        "term": "Polar Craters", 
+        "translation": "crateri polari",
+        "gender": "masculine", "number": "plural"
+      },
+      "PolarHighlands": {
+        "term": "Polar Highlands", 
+        "translation": "colline polari",
+        "gender": "feminine", "number": "plural"
+      },
+      "PolarLowlands": {
+        "term": "Polar Lowlands", 
+        "translation": "bassopiani polari",
+        "gender": "masculine", "number": "plural"
+      },
+      "Ridges": {
+        "term": "Ridges", 
+        "translation": "dorsali",
+        "gender": "feminine", "number": "plural"
+      },
+      "Shallows": {
+        "term": "Shallows", 
+        "translation": "basse acque",
+        "gender": "feminine", "number": "plural"
+      },
+      "Shores": {
+        "term": "Shores", 
+        "translation": "costa",
+        "gender": "feminine", "number": "plural"
+      },
+      "Slopes": {
+        "term": "Slopes", 
+        "translation": "declivi",
+        "gender": "masculine", "number": "plural"
+      },
+      "SouthEasternLowlands": {
+        "term": "South Eastern Lowlands", 
+        "translation": "bassopiani sud-orientali",
+        "gender": "masculine", "number": "plural"
+      },
+      "SouthEasternMountainRange": {
+        "term": "South Eastern Mountain Range", 
+        "translation": "catena montuosa sud-orientale",
+        "gender": "feminine", "number": "singular"
+      },
+      "SouthWesternLowlands": {
+        "term": "South Western Lowlands", 
+        "translation": "bassopiani sud-occidentali",
+        "gender": "masculine", "number": "plural"
+      },
+      "SouthernBasin": {
+        "term": "Southern Basin", 
+        "translation": "bacino sud-occidentale",
+        "gender": "masculine", "number": "singular"
+      },
+      "SouthernGlaciers": {
+        "term": "Southern Glaciers", 
+        "translation": "ghiacciai australi",
+        "gender": "masculine", "number": "plural"
+      },
+      "SouthernIceShelf": {
+        "term": "Southern Ice Shelf", 
+        "translation": "tavolato di ghiaccio australe",
+        "gender": "masculine", "number": "singular"
+      },
+      "SouthernValleys": {
+        "term": "Southern Valleys", 
+        "translation": "vallate meridionali",
+        "gender": "feminine", "number": "plural"
+      },
+      "SouthwestCrater": {
+        "term": "Southwest Crater", 
+        "translation": "cratere sud-occidentale",
+        "gender": "masculine", "number": "singular"
+      },"TheSagenSea": {
+        "term": "The Sagen Sea", 
+        "translation": "mare di Sagen",
+        "gender": "masculine", "number": "singular"
+      },
+      "TwinCraters": {
+        "term": "Twin Craters", 
+        "translation": "crateri gemelli",
+        "gender": "masculine", "number": "plural"
+      },
+      "TychoCrater": {
+        "term": "Tycho Crater", 
+        "translation": "cratere Tycho",
+        "gender": "masculine", "number": "singular"
+      },
+      "Valley": {
+        "term": "Valley", 
+        "translation": "valle",
+        "gender": "feminine", "number": "singular"
+      },
+      "WesternCanyon": {
+        "term": "Western Canyon", 
+        "translation": "canyon occidentale",
+        "gender": "masculine", "number": "singular"
+      },
+      "WesternLowlands": {
+        "term": "Western Lowlands", 
+        "translation": "bassopiani occidentali",
+        "gender": "masculine", "number": "plural"
+      },
+      "WesternMountainRidge": {
+        "term": "Western Mountain Ridge", 
+        "translation": "cresta montuosa occidentale",
+        "gender": "feminine", "number": "singular"
+      },
+      "Lowlands": {
+        "term": "Lowlands", 
+        "translation": "bassopiani",
+        "gender": "masculine", "number": "plural"
+      },
+      "Midlands": {
+        "term": "Midlands", 
+        "translation": "pianure",
+        "gender": "feminine", "number": "plural"
+      },
+      "Highlands": {
+        "term": "Highlands", 
+        "translation": "colline",
+        "gender": "feminine", "number": "plural"
+      },
+      "Mountains": {
+        "term": "Mountains", 
+        "translation": "montagne",
+        "gender": "feminine", "number": "plural"
+      },
+      "Trenches": {
+        "term": "Trenches", 
+        "translation": "fosse", 
+        "gender": "feminine", "number": "plural" 
+      },
+      "NotableMountains": {
+        "term": "Notable Mountains", 
+        "translation": "montagne notevoli", 
+        "gender": "feminine", "number": "plural" 
+      },
+      "NotablePlains": {
+        "term": "Notable Plains", 
+        "translation": "pianure notevoli", 
+        "gender": "feminine", "number": "plural" 
+      },
+      "Volcano": {
+        "term": "Volcano", 
+        "translation": "vulcano",
+        "gender": "masculine", "number": "singular" 
+      },
+      "AridLowlands": {
+        "term": "Arid Lowlands", 
+        "translation": "bassopiani aridi",
+        "gender": "masculine", "number": "plural" 
+      },
+      "AridMidlands": {
+        "term": "Arid Midlands", 
+        "translation": "pianure aride",
+        "gender": "feminine", "number": "plural" 
+      },
+      "AridHighlands": {
+        "term": "Arid Highlands", 
+        "translation": "colline aride",
+        "gender": "feminine", "number": "plural" 
+      },
+      "AridMountains": {
+        "term": "Arid Mountains", 
+        "translation": "montagne aride",
+        "gender": "feminine", "number": "plural" 
+      },
+      "BrownBasins": {
+        "term": "Brown Basins", 
+        "translation": "bacini marroni",
+        "gender": "masculine", "number": "plural" 
+      },
+      "BrownLowlands": {
+        "term": "Brown Lowlands", 
+        "translation": "bassopiani marroni",
+        "gender": "masculine", "number": "plural" 
+      },
+      "BrownMidlands": {
+        "term": "Brown Midlands", 
+        "translation": "pianure marroni",
+        "gender": "feminine", "number": "plural" 
+      },
+      "BrownHighlands": {
+        "term": "Brown Highlands", 
+        "translation": "colline marroni",
+        "gender": "feminine", "number": "plural" 
+      },
+      "EnclosedFaults": {
+        "term": "Enclosed Faults", 
+        "translation": "faglie racchiuse",
+        "gender": "feminine", "number": "plural"
+      },
+      "ExoticCraters": {
+        "term": "Exotic Craters", 
+        "translation": "crateri esotici",
+        "gender": "masculine", "number": "plural"
+      },
+      "RareCraters": {
+        "term": "Rare Craters", 
+        "translation": "crateri rari",
+        "gender": "masculine", "number": "plural"
+      },
+      "VoronoiCraters": {
+        "term": "Voronoi Craters", 
+        "translation": "crateri di Voronoi",
+        "gender": "masculine", "number": "plural"
+      },
+      "NotableCraters": {
+        "term": "Notable Craters", 
+        "translation": "crateri notevoli",
+        "gender": "masculine", "number": "plural"
+      },
+      "Pockmarks": {
+        "term": "Pockmarks", 
+        "translation": "cavità",
+        "gender": "feminine", "number": "plural"
+      },
+      "InlandWaterBodies": {
+        "term": "Inland Water", 
+        "translation": "acque interne",
+        "gender": "feminine", "number": "plural"
+      },
+      "GreatLakes": {
+        "term": "Great Lakes", 
+        "translation": "grandi laghi",
+        "gender": "masculine", "number": "plural"
+      },
+      "ArcticSea": {
+        "term": "Arctic Sea", 
+        "translation": "mare artico",
+        "gender": "masculine", "number": "singular"
+      },
+      "Sub-ArcticSea": {
+        "term": "Sub-Arctic Sea", 
+        "translation": "mare sub-artico",
+        "gender": "masculine", "number": "singular"
+      },
+      "ForemansSea": {
+        "term": "Foreman's Sea", 
+        "translation": "mare di Foreman",
+        "gender": "masculine", "number": "singular"
+      },
+      "TriangulusSea": {
+        "term": "Triangulus Sea", 
+        "translation": "mare del Triangolo",
+        "gender": "masculine", "number": "singular"
+      },
+      "NorthernSea": {
+        "term": "Northern Sea", 
+        "translation": "mare settentrionale",
+        "gender": "masculine", "number": "singular"
+      },
+      "EasternSea": {
+        "term": "Eastern Sea", 
+        "translation": "mare orientale",
+        "gender": "masculine", "number": "singular"
+      },
+      "WesternSea": {
+        "term": "Western Sea", 
+        "translation": "mare occidentale",
+        "gender": "masculine", "number": "singular"
+      },
+      "KrenwichSea": {
+        "term": "Krenwich Sea", 
+        "translation": "mare di Krenwich",
+        "gender": "masculine", "number": "singular"
+      },
+      "JoolwardSea": {
+        "term": "Joolward Sea", 
+        "translation": "mare di Jool",
+        "gender": "masculine", "number": "singular"
+      },
+      "PolwardSea": {
+        "term": "Polward Sea", 
+        "translation": "mare di Pol",
+        "gender": "masculine", "number": "singular"
+      },
+      "MethaneLakes": {
+        "term": "Methane Lakes", 
+        "translation": "laghi di metano",
+        "gender": "masculine", "number": "plural"
+      },
+      "PolarLakes": {
+        "term": "Polar Lakes", 
+        "translation": "laghi polari",
+        "gender": "masculine", "number": "plural"
+      },
+      "PetrolLakes": {
+        "term": "Petrol Lakes", 
+        "translation": "laghi di petrolio",
+        "gender": "masculine", "number": "plural"
+      },
+      "SeaofAkron": {
+        "term": "Sea of Akron", 
+        "translation": "mare di Akron",
+        "gender": "masculine", "number": "singular"
+      },
+      "SeaofNessus": {
+        "term": "Sea of Nessus", 
+        "translation": "mare di Nessus",
+        "gender": "masculine", "number": "singular"
+      },
+      "SeaofTaniwha": {
+        "term": "Sea of Taniwha", 
+        "translation": "mare di Taniwha",
+        "gender": "masculine", "number": "singular"
+      },
+      "SeaofGigan": {
+        "term": "Sea of Gigan", 
+        "translation": "mare di Gigan",
+        "gender": "masculine", "number": "singular"
+      },
+      "SeaofRodan": {
+        "term": "Sea of Rodan", 
+        "translation": "mare di Rodan",
+        "gender": "masculine", "number": "singular"
+      },
+      "SeaofGojira": {
+        "term": "Sea of Gojira", 
+        "translation": "mare di Gojira",
+        "gender": "masculine", "number": "singular"
+      },
+      "SeaofGhidorah": {
+        "term": "Sea of Ghidorah", 
+        "translation": "mare di Ghidorah",
+        "gender": "masculine", "number": "singular"
+      },
+      "SeaofBagorah": {
+        "term": "Sea of Bagorah", 
+        "translation": "mare di Bagorah",
+        "gender": "masculine", "number": "singular"
+      },
+      "EquatorialBands": {
+        "term": "Equatorial Bands", 
+        "translation": "bande equatoriali",
+        "gender": "feminine", "number": "plural"
+      },
+      "TemperateBands": {
+        "term": "Temperate Bands", 
+        "translation": "bande temperate",
+        "gender": "feminine", "number": "plural"
+      },
+      "ExposedLowerDeck": {
+        "term": "Exposed Lower Deck", 
+        "translation": "strati inferiori scoperti",
+        "gender": "masculine", "number": "singular"
+      },
+      "SubpolarBands": {
+        "term": "Subpolar Bands", 
+        "translation": "bande sub-polari",
+        "gender": "feminine", "number": "plural"
+      },
+      "StormComplex": {
+        "term": "Storm Complex", 
+        "translation": "formazioni temporalesche",
+        "gender": "feminine", "number": "singular"
+      },
+      "UpperStormDeck": {
+        "term": "Upper Storm Deck", 
+        "translation": "livello superiore della tempesta",
+        "gender": "masculine", "number": "singular"
+      },
+      "NorthPolarZone": {
+        "term": "North Polar Zone", 
+        "translation": "zona polare settentrionale",
+        "gender": "feminine", "number": "singular" 
+      },
+      "NorthSubpolarZone": {
+        "term": "North Subpolar Zone", 
+        "translation": "zona sub-polare settentrionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "NorthTemperateZone": {
+        "term": "North Temperate Zone", 
+        "translation": "zona temperata settentrionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "NorthTropicZone": {
+        "term": "North Tropic Zone", 
+        "translation": "zona tropicale settentrionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "EquatorialZone": {
+        "term": "Equatorial Zone", 
+        "translation": "zona equatoriale",
+        "gender": "feminine", "number": "singular"
+      },
+      "SouthTropicZone": {
+        "term": "South Tropic Zone", 
+        "translation": "zona tropicale meridionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "SouthTemperateZone": {
+        "term": "South Temperate Zone", 
+        "translation": "zona temperata meridionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "SouthSubpolarZone": {
+        "term": "South Subpolar Zone", 
+        "translation": "zona sub-polare meridionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "SouthPolarZone": {
+        "term": "South Polar Zone", 
+        "translation": "zona polare meridionale",
+        "gender": "feminine", "number": "singular"
+      },
+      "PolarIceCraters": {
+        "term": "Polar Ice Craters", 
+        "translation": "crateri polari ghiacciati",
+        "gender": "masculine", "number": "plural"
+      },
+      "TropicalLowlands": {
+        "term": "Tropical Lowlands", 
+        "translation": "bassopiani tropicali",
+        "gender": "masculine", "number": "plural"
+      },
+      "TemperateLowlands": {
+        "term": "Temperate Lowlands", 
+        "translation": "bassopiani temperati",
+        "gender": "masculine", "number": "plural"
+      },
+      "TropicalMidlands": {
+        "term": "Tropical Midlands", 
+        "translation": "pianure tropicali",
+        "gender": "feminine", "number": "plural"
+      },
+      "TemperateMidlands": {
+        "term": "Temperate Midlands", 
+        "translation": "pianure temperate",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkenedHighlands": {
+        "term": "Darkened Highlands", 
+        "translation": "colline scure",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkenedLowlands": {
+        "term": "Darkened Lowlands", 
+        "translation": "bassopiani scuri",
+        "gender": "masculine", "number": "plural"
+      },
+      "DarkenedMidlands": {
+        "term": "Darkened Midlands", 
+        "translation": "pianure scure",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkSideHighlands": {
+        "term": "Dark Side Highlands", 
+        "translation": "colline in ombra",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkSideLowlands": {
+        "term": "Dark Side Lowlands", 
+        "translation": "bassopiani in ombra",
+        "gender": "masculine", "number": "plural"
+      },
+      "DarkSideMidlands": {
+        "term": "Dark Side Midlands", 
+        "translation": "pianure in ombra",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkSideMountains": {
+        "term": "Dark Side Mountains", 
+        "translation": "montagne in ombra",
+        "gender": "feminine", "number": "plural"
+      },
+      "EasternHighlands": {
+        "term": "Eastern Highlands", 
+        "translation": "colline orientali",
+        "gender": "feminine", "number": "plural"
+      },
+      "FreshWater": {
+        "term": "Fresh Water", 
+        "translation": "acqua dolce",
+        "gender": "feminine", "number": "singular"
+      },
+      "ImpactBasins": {
+        "term": "Impact Basins", 
+        "translation": "bacini d'impatto",
+        "gender": "masculine", "number": "plural"
+      },
+      "TropicalCraquelure": {
+        "term": "Tropical Craquelure", 
+        "translation": "crettatura tropicale",
+        "gender": "feminine", "number": "singular"
+      },
+      "TemperateCraquelure": {
+        "term": "Temperate Craquelure", 
+        "translation": "crettatura temperata",
+        "gender": "feminine", "number": "singular"
+      },
+      "MajorCraters": {
+        "term": "Major Craters", 
+        "translation": "crateri maggiori",
+        "gender": "masculine", "number": "plural"
+      },
+      "SouthPolarHills": {
+        "term": "South Polar Hills", 
+        "translation": "colline polari meridionali",
+        "gender": "feminine", "number": "plural"
+      },
+      "TropicalUplands": {
+        "term": "Tropical Uplands", 
+        "translation": "altopiani tropicali",
+        "gender": "masculine", "number": "plural"
+      },
+      "TemperateUplands": {
+        "term": "Temperate Uplands", 
+        "translation": "altopiani temperati",
+        "gender": "masculine", "number": "plural"
+      },
+      "GrandPeaks": {
+        "term": "Grand Peaks", 
+        "translation": "grandi picchi",
+        "gender": "masculine", "number": "plural"
+      },
+      "Volcanoes": {
+        "term": "Volcanoes", 
+        "translation": "vulcani",
+        "gender": "masculine", "number": "plural"
+      },
+      "SaltySeas": {
+        "term": "Salty Seas", 
+        "translation": "mari salati",
+        "gender": "masculine", "number": "plural"
+      },
+      "WesternHighlands": {
+        "term": "Western Highlands", 
+        "translation": "colline occidentali",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkTropicalBands": {
+        "term": "Dark Tropical Bands", 
+        "translation": "bande tropicali scure",
+        "gender": "feminine", "number": "plural"
+      },
+      "LightTropicalBands": {
+        "term": "Light Tropical Bands", 
+        "translation": "bande tropicali chiare",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkTemperateBands": {
+        "term": "Dark Temperate Bands", 
+        "translation": "bande temperate scure",
+        "gender": "feminine", "number": "plural"
+      },
+      "LightTemperateBands": {
+        "term": "Light Temperate Bands", 
+        "translation": "bande temperate chiare",
+        "gender": "feminine", "number": "plural"
+      },
+      "DarkPolarBands": {
+        "term": "Dark Polar Bands", 
+        "translation": "bande polari scure",
+        "gender": "feminine", "number": "plural"
+      },
+      "LightPolarBands": {
+        "term": "Light Polar Bands", 
+        "translation": "bande polari chiare",
+        "gender": "feminine", "number": "plural"
+      },
+      "Basins": {
+        "term": "Basins", 
+        "translation": "bacini",
+        "gender": "masculine", "number": "plural"
+      },
+      "MagmaSea": {
+        "term": "Magma Sea", 
+        "translation": "mare di lava",
+        "gender": "masculine", "number": "singular"
+      },
+      "MagmaShores": {
+        "term": "Magma Shores", 
+        "translation": "costa lavica",
+        "gender": "feminine", "number": "singular"
+      },
+      "ScorchedLowlands": {
+        "term": "Scorched Lowlands", 
+        "translation": "bassopiani arsi",
+        "gender": "masculine", "number": "plural"
+      },
+      "SunnyLowlands": {
+        "term": "Sunny Lowlands", 
+        "translation": "bassopiani illuminati",
+        "gender": "masculine", "number": "plural"
+      },
+      "SunnyHighlands": {
+        "term": "Sunny Highlands", 
+        "translation": "colline illuminate",
+        "gender": "feminine", "number": "plural"
+      },
+      "TransitionalLowlands": {
+        "term": "Transitional Lowlands", 
+        "translation": "bassopiani crepuscolari",
+        "gender": "masculine", "number": "plural"
+      },
+      "TransitionalHighlands": {
+        "term": "Transitional Highlands", 
+        "translation": "colline crepuscolari",
+        "gender": "feminine", "number": "plural"
+      },
+      "SoutheasternMountains": {
+        "term": "Southeastern Mountains", 
+        "translation": "montagne sud-orientali",
+        "gender": "feminine", "number": "plural"
+      },
+      "WesternMountains": {
+        "term": "Western Mountains", 
+        "translation": "montagne occidentali",
+        "gender": "feminine", "number": "plural"
+      },
+      "WelcomeBackIsland": {
+        "term": "Welcome Back Island",
+        "translation": "Isola del Ritorno",
+        "gender": "feminine", "number": "singular"
+      }
+    }
+  }
+}
