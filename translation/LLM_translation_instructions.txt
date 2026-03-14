@@ -17,12 +17,11 @@ Recommended setup:
 You must also add a translation dictionary for the target language
 (JSON format) as a project file.
 
-The dictionary contains canonical translations for body names,
-biomes, and technical terminology used in the science results.
+The dictionary contains canonical translations for body names, biomes, and technical terminology used in the science results.
 
 For the full translation workflow see:
 
-docs/TRANSLATION.md
+translation/TRANSLATION.md
 
 
 BEGIN PROJECT INSTRUCTIONS
