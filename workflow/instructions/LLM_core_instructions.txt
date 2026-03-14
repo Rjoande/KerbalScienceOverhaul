@@ -1,3 +1,36 @@
+KERBAL SCIENCE OVERHAUL
+LLM GENERATION CORE INSTRUCTIONS
+
+⚠️ Do not paste this entire file into the GPT project instructions.
+
+Paste ONLY the text following the marker:
+
+    BEGIN PROJECT INSTRUCTIONS
+
+into the **Project Instructions** field of a GPT project.
+
+This configuration is intended for advanced users generating
+science result datasets.
+
+Recommended setup:
+- GPT-5.2 or later
+- Thinking / reasoning mode enabled
+- Closed project environment
+
+Required project files include (at minimum):
+
+- bodies dataset
+- experiment definitions (ScienceDefs)
+- experiment mask guide
+- glossary
+- extensive project instructions
+
+These files provide the contextual data used by the model to
+generate consistent science results.
+
+BEGIN PROJECT INSTRUCTIONS
+--------------------------
+
 ROLE
 You generate new science result strings for Kerbal Space Program, targeting the JNSQ planet pack.
 
