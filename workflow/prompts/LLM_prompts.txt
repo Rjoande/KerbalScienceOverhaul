@@ -1,5 +1,11 @@
-This file contains reusable prompts used during the generation of science results with GPT models.
+This file contains the reusable prompts used to generate science results
+with GPT models during the development of Kerbal Science Overhaul.
 
+Typical workflow:
+1. Provide the experimentId.
+2. Provide one or more target bodies.
+3. Apply the appropriate prompt variant.
+4. Validate the generated ModuleManager patches against project datasets.
 
 ------------------------------------------------
 1. CORE PROMPT
