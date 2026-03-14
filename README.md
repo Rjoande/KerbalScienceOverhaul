@@ -116,7 +116,7 @@ All generated results were subsequently reviewed before integration (a small num
 
 # AI Generation Methodology
 
-Science results were generated using **GPT-5.0 (Premium)** within a controlled project environment.
+Science results were generated using **GPT-5.2 Plus** within a controlled project environment.
 
 The generation process relied on a **closed project context**, meaning the model operated only on project-specific files rather than external retrieval or memory systems.
 
@@ -236,9 +236,9 @@ For this reason, the original CSS package should **not be installed alongside KS
 
 # Contributing
 
-Contributions are welcome.
+Localization contributions are welcome. See the [provided documentation](https://github.com/Rjoande/KerbalScienceOverhaul/blob/main/translation/TRANSLATION.md) for information on contributing with translations or language dictionaries.
 
-Kerbal Science Overhaul is a large data-driven project, and there are several areas where community contributions can be particularly helpful, including:
+Kerbal Science Overhaul is a large data-driven project, and there are several other areas where community contributions can be particularly helpful, including:
 
 - improving or expanding science results
 - correcting grammar or localization issues
