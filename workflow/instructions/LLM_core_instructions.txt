@@ -7,7 +7,7 @@ Paste ONLY the text following the marker:
 
     BEGIN PROJECT INSTRUCTIONS
 
-into the **Project Instructions** field of a GPT project.
+into the Project Instructions field of a GPT project.
 
 This configuration is intended for advanced users generating
 science result datasets.
