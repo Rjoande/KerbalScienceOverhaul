@@ -27,7 +27,7 @@ At the same time, major planet packs such as **JNSQ** add many celestial bodies 
 | Celestial bodies covered | 48 |
 | Biomes covered | 174 |
 | Supported science mods | 7 |
-| Mod components | 4 |
+| Mod components | 5 |
 
 ---
 
@@ -112,6 +112,14 @@ The generation of this dataset required several months of iterative work to:
 
 All generated results were subsequently reviewed before integration (a small number of stray hyphens may still exist.)
 
+## Deep Space Stories (Optional)
+
+Kerbal Science Overhaul also includes a small collection titled **Deep Space Stories**, containing approximately **300 science results** inspired by classic science fiction.
+
+These entries adopt a slightly more cinematic tone and occasionally evoke situations reminiscent of works such as *2001: A Space Odyssey* or *The Martian*.
+
+They were generated using a separate set of stylistic instructions distinct from the main dataset and are intended as a small creative addition alongside the standard science results.
+
 ---
 
 # AI Generation Methodology
@@ -151,7 +159,7 @@ Install the mod components into your **GameData** directory.
 Place the folder:
 
 ```
-001_ScienceRefactor
+001_KSO_ScienceRefactor
 ```
 
 into:
@@ -182,8 +190,9 @@ Do **not merge or overwrite** existing installations, as the internal structure 
 Install the appropriate science result packages depending on your planet packs:
 
 ```
-JNSQ_Science
-GEP_Science
+KSO_JNSQ_Science
+KSO_GEP_Science
+KSO_DeepSpaceStories
 ```
 
 Notably, **JNSQ_Science also contains many generic results for stock planets**, meaning it can benefit players even if they are not using JNSQ.
@@ -197,10 +206,11 @@ When updating Kerbal Science Overhaul:
 1. Remove the following folders from `GameData`:
 
 ```
-001_ScienceRefactor
+001_KSO_ScienceRefactor
 CrowdSourcedScience
-JNSQ_Science
-GEP_Science
+KSO_DeepSpaceStories
+KSO_GEP_Science
+KSO_JNSQ_Science
 ```
 
 2. Install the new versions from the release archive.
