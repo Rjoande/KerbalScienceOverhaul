@@ -190,9 +190,8 @@ Do **not merge or overwrite** existing installations, as the internal structure 
 Install the appropriate science result packages depending on your planet packs:
 
 ```
-KSO_JNSQ_Science
-KSO_GEP_Science
-KSO_DeepSpaceStories
+KSO_JNSQ
+KSO_GEP
 ```
 
 Notably, **JNSQ_Science also contains many generic results for stock planets**, meaning it can benefit players even if they are not using JNSQ.
@@ -209,8 +208,8 @@ When updating Kerbal Science Overhaul:
 001_KSO_ScienceRefactor
 CrowdSourcedScience
 KSO_DeepSpaceStories
-KSO_GEP_Science
-KSO_JNSQ_Science
+KSO_GEP
+KSO_JNSQ
 ```
 
 2. Install the new versions from the release archive.
