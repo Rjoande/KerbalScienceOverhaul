@@ -216,6 +216,28 @@ KSO_JNSQ
 
 ---
 
+## Uninstallation
+
+Kerbal Science Overhaul can be safely removed from an existing save.
+
+Uninstalling the mod **will not remove any science points already earned**, as science values are stored directly in the save file.
+
+However, depending on the combination of mods installed, the following effects may occur after removal:
+
+* Some experiments that were unified by **ScienceRefactor** may reappear as separate experiments and may appear as **not yet performed**.
+* In the **R&D Archives**, experiment entries that were originally localized by KSO may display their raw localization keys (for example `#JNSQ_Science_...`).
+
+These effects do not affect gameplay and do not corrupt the save.
+
+### Optional fixes
+
+If desired, the second issue can be resolved by:
+
+* reinstalling **only the localization files** from KSO, or
+* manually editing the affected entries in the save file (advanced users).
+
+---
+
 # Supported Mods
 
 The following mods are affected by the **ScienceRefactor compatibility logic** and are also included in the **AI-generated science result datasets** provided in `JNSQ_Science` and `GEP_Science`.
