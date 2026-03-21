@@ -194,7 +194,7 @@ KSO_JNSQ
 KSO_GEP
 ```
 
-Notably, **JNSQ_Science also contains many generic results for stock planets**, meaning it can benefit players even if they are not using JNSQ.
+Notably, **KSO_JNSQ also contains many generic results for stock planets**, meaning it can benefit players even if they are not using JNSQ.
 
 ---
 
