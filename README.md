@@ -19,9 +19,9 @@ At the same time, major planet packs such as **JNSQ** add many celestial bodies 
 
 | Category | Value |
 |--------|--------|
-| Generated science results | 21,636 |
-| Results for Stock / JNSQ | 16,423 |
-| Results for GEP | 5,213 |
+| Generated science results | 21,701 |
+| Results for Stock / JNSQ | 16,462 |
+| Results for GEP | 5,239 |
 | Experiments covered (generation) | 63 |
 | Experiments covered (refactoring) | 79 |
 | Celestial bodies covered | 48 |
@@ -124,7 +124,7 @@ They were generated using a separate set of stylistic instructions distinct from
 
 # AI Generation Methodology
 
-Science results were generated using **GPT-5.2 Plus** within a controlled project environment.
+Science results were generated using **GPT-5.2 Plus** (or higher) within a controlled project environment.
 
 The generation process relied on a **closed project context**, meaning the model operated only on project-specific files rather than external retrieval or memory systems.
 
