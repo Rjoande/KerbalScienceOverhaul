@@ -179,9 +179,11 @@ Kerbal Science Overhaul includes a **localized and revised version of CrowdSourc
 To install it:
 
 1. Remove any existing **CrowdSourcedScience** installation from `GameData`
-2. Copy the **CrowdSourcedScience** folder from the KSO release into `GameData`
+2. Copy the **KSO_CrowdSourcedScience** folder from the KSO release into `GameData`
 
 Do **not merge or overwrite** existing installations, as the internal structure differs.
+
+> **Note:** If you need to maintain compatibility with mods that depend on `:NEEDS[CrowdSourcedScience]`, you can keep the original `CrowdSourcedScience` folder and skip `KSO_CrowdSourcedScience`. KSO will still function, but localization support for CSS results will not be available.
 
 ---
 
@@ -206,7 +208,7 @@ When updating Kerbal Science Overhaul:
 
 ```
 001_KSO_ScienceRefactor
-CrowdSourcedScience
+KSO_CrowdSourcedScience
 KSO_DeepSpaceStories
 KSO_GEP
 KSO_JNSQ
@@ -218,7 +220,7 @@ KSO_JNSQ
 
 ## Uninstallation
 
-Kerbal Science Overhaul can be safely removed from an existing save.
+Kerbal Science Overhaul can be safely removed from an existing save. If you wish to continue using CrowdSourced Science after removing KSO, reinstall the original CSS package separately.
 
 Uninstalling the mod **will not remove any science points already earned**, as science values are stored directly in the save file.
 
@@ -259,7 +261,7 @@ Supported mods include:
 
 CrowdSourced Science (CSS) is **not treated as an external dependency**.
 
-Kerbal Science Overhaul includes a **localized and internally revised version of CSS**, which replaces the original installation entirely.
+Kerbal Science Overhaul includes a **localized and internally revised version of CSS** distributed under the `KSO_CrowdSourcedScience` folder, which should replace the original `CrowdSourcedScience` installation.
 
 For this reason, the original CSS package should **not be installed alongside KSO**. The version included with Kerbal Science Overhaul is already integrated into the refactored science result system.
 
