@@ -164,7 +164,7 @@ Kerbal Science Overhaul is available on [CKAN](https://github.com/KSP-CKAN/CKAN)
 | `KerbalScienceOverhaul-GEP` | `KSO_GEP` |
 | `KerbalScienceOverhaul-DeepSpaceStories` | `KSO_DeepSpaceStories` |
 
-All modules require **ModuleManager**, and `KerbalScienceOverhaul-JNSQ` also requires **JNSQ**. The result packages recommend ScienceRefactor, and the localized CrowdSourced Science module replaces (and conflicts with) the original `CrowdSourcedScience`.
+All modules require **ModuleManager**. The result packages recommend ScienceRefactor, `KerbalScienceOverhaul-JNSQ` also recommends **JNSQ** (you can untick it to keep only the generic results for stock planets), and the localized CrowdSourced Science module replaces (and conflicts with) the original `CrowdSourcedScience`.
 
 ### Manual installation
 

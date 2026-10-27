@@ -16,9 +16,9 @@ tags:
   - science
 depends:
   - name: ModuleManager
-  - name: JNSQ
 recommends:
   - name: KerbalScienceOverhaul
+  - name: JNSQ
 install:
   - find: KSO_JNSQ
     install_to: GameData
