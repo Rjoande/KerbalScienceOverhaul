@@ -2,7 +2,7 @@
 
 All notable changes to Kerbal Science Overhaul. Each entry matches the notes of the corresponding [GitHub release](https://github.com/Rjoande/KerbalScienceOverhaul/releases).
 
-## v1.2.1 (unreleased)
+## v1.2.1 (2026-10-28)
 
 - **Launch pad flame deflector:** Kerbal Konstructs launch pads with pad smoke (e.g. the Tundra Space Center pads) tag their flame deflector as `LaunchpadFX`, and stock KSP turns it into a separate "biome" with a raw, untranslated name. All launch pad results now apply there as well, and the biome is shown as "Launch Pad (Flame Deflector)", localized in Italian and Simplified Chinese. Subjects already in your save keep their old title.
 
