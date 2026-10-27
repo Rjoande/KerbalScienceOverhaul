@@ -1,0 +1,25 @@
+spec_version: v1.4
+identifier: KerbalScienceOverhaul-CrowdSourcedScience
+name: Kerbal Science Overhaul - Localized CrowdSourced Science
+abstract: >-
+  Localized and revised version of CrowdSourced Science, with extra results for
+  JNSQ biomes. Replaces the original CrowdSourced Science.
+$kref: '#/ckan/github/Rjoande/KerbalScienceOverhaul'
+x_netkan_version_edit: '^[vV]?(?<version>.+)$'
+ksp_version_min: '1.12'
+ksp_version_max: '1.12'
+license: MIT
+resources:
+  homepage: https://forum.kerbalspaceprogram.com/topic/230013-1125-kerbal-science-overhaul-refactored-localized-and-ai-assisted-science-content-for-kerbal-space-program/
+tags:
+  - config
+  - science
+depends:
+  - name: ModuleManager
+recommends:
+  - name: KerbalScienceOverhaul
+conflicts:
+  - name: CrowdSourcedScience
+install:
+  - find: KSO_CrowdSourcedScience
+    install_to: GameData

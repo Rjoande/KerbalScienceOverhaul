@@ -1,0 +1,24 @@
+spec_version: v1.4
+identifier: KerbalScienceOverhaul-JNSQ
+name: Kerbal Science Overhaul - JNSQ results
+abstract: >-
+  AI-assisted science results for JNSQ bodies and biomes, also covering stock
+  and mod experiments, plus generic results for stock planets.
+$kref: '#/ckan/github/Rjoande/KerbalScienceOverhaul'
+x_netkan_version_edit: '^[vV]?(?<version>.+)$'
+ksp_version_min: '1.12'
+ksp_version_max: '1.12'
+license: MIT
+resources:
+  homepage: https://forum.kerbalspaceprogram.com/topic/230013-1125-kerbal-science-overhaul-refactored-localized-and-ai-assisted-science-content-for-kerbal-space-program/
+tags:
+  - config
+  - science
+depends:
+  - name: ModuleManager
+  - name: JNSQ
+recommends:
+  - name: KerbalScienceOverhaul
+install:
+  - find: KSO_JNSQ
+    install_to: GameData

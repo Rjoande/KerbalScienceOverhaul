@@ -152,6 +152,22 @@ The project repository includes the datasets and prompt templates used during th
 
 # Installation
 
+### CKAN
+
+Kerbal Science Overhaul is available on [CKAN](https://github.com/KSP-CKAN/CKAN) as separate modules, so you can install only what you need:
+
+| CKAN module | Folder |
+|--------|--------|
+| `KerbalScienceOverhaul` (ScienceRefactor) | `001_KSO_ScienceRefactor` |
+| `KerbalScienceOverhaul-CrowdSourcedScience` | `KSO_CrowdSourcedScience` |
+| `KerbalScienceOverhaul-JNSQ` | `KSO_JNSQ` |
+| `KerbalScienceOverhaul-GEP` | `KSO_GEP` |
+| `KerbalScienceOverhaul-DeepSpaceStories` | `KSO_DeepSpaceStories` |
+
+All modules require **ModuleManager**, and `KerbalScienceOverhaul-JNSQ` also requires **JNSQ**. The result packages recommend ScienceRefactor, and the localized CrowdSourced Science module replaces (and conflicts with) the original `CrowdSourcedScience`.
+
+### Manual installation
+
 Install the mod components into your **GameData** directory.
 
 ### ScienceRefactor

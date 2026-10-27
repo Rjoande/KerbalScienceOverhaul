@@ -12,6 +12,7 @@ desktop.ini
 *.tmp
 *.bak
 *.backup
+*.orig
 *~
 
 # Logs
@@ -21,3 +22,14 @@ desktop.ini
 *.zip
 *.7z
 *.rar
+
+# CKAN tooling (local netkan inflate tests; the .netkan itself stays tracked)
+netkan.exe
+ckan.exe
+*.ckan
+
+# ModuleManager output, if GameData is ever loaded by a test install
+ModuleManager.ConfigCache
+ModuleManager.ConfigSHA
+ModuleManager.Physics
+ModuleManager.TechTree

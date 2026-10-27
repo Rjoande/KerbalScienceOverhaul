@@ -1,0 +1,25 @@
+spec_version: v1.4
+identifier: KerbalScienceOverhaul
+name: Kerbal Science Overhaul
+abstract: >-
+  ScienceRefactor: localizes, standardizes and merges science results from stock
+  KSP and popular part mods, so that science result packs can coexist.
+$kref: '#/ckan/github/Rjoande/KerbalScienceOverhaul'
+$vref: '#/ckan/ksp-avc'
+x_netkan_version_edit: '^[vV]?(?<version>.+)$'
+license: MIT
+resources:
+  homepage: https://forum.kerbalspaceprogram.com/topic/230013-1125-kerbal-science-overhaul-refactored-localized-and-ai-assisted-science-content-for-kerbal-space-program/
+tags:
+  - config
+  - science
+depends:
+  - name: ModuleManager
+suggests:
+  - name: KerbalScienceOverhaul-CrowdSourcedScience
+  - name: KerbalScienceOverhaul-JNSQ
+  - name: KerbalScienceOverhaul-GEP
+  - name: KerbalScienceOverhaul-DeepSpaceStories
+install:
+  - find: 001_KSO_ScienceRefactor
+    install_to: GameData
