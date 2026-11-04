@@ -33,3 +33,8 @@ ModuleManager.ConfigCache
 ModuleManager.ConfigSHA
 ModuleManager.Physics
 ModuleManager.TechTree
+
+# Plugin build intermediates (Source/KSOScienceResults; Directory.Build.props keeps them out of the repo anyway)
+Source/**/bin/
+Source/**/obj/
+Source/**/.vs/

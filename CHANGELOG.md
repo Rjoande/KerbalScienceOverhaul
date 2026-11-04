@@ -2,6 +2,9 @@
 
 All notable changes to Kerbal Science Overhaul. Each entry matches the notes of the corresponding [GitHub release](https://github.com/Rjoande/KerbalScienceOverhaul/releases).
 
+## v1.3.0 (unreleased)
+
+- **New plugin, KSOScienceResults (core):** stock KSP picks a result text by pooling every key contained in the subject and drawing one at random, so the generic `Srf*` / `InSpace*` entries (dozens per experiment) drowned the two or three texts written for each biome: in practice biome results were almost never shown. The core now ships a small Harmony plugin that makes the most specific keys win (biome > body/situation > situation > `default`), uses all `default` entries instead of only the first, and offers an optional `fallbackChance` to let less specific texts through now and then. Settings in `Plugins/KSOScienceResults.cfg` (ModuleManager-patchable). **New dependency: HarmonyKSP** (`Harmony2` on CKAN). The result packages keep working with the stock selection when the core is absent.
 ## v1.2.1 (2026-10-28)
 
 - **Launch pad flame deflector:** Kerbal Konstructs launch pads with pad smoke (e.g. the Tundra Space Center pads) tag their flame deflector as `LaunchpadFX`, and stock KSP turns it into a separate "biome" with a raw, untranslated name. All launch pad results now apply there as well, and the biome is shown as "Launch Pad (Flame Deflector)", localized in Italian and Simplified Chinese. Subjects already in your save keep their old title.

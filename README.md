@@ -54,12 +54,21 @@ Some experiments—especially stock experiments—use rigid situation definition
 
 ScienceRefactor introduces the use of **ModuleManager wildcard conditions (`*`)**, allowing different science result packages to coexist without overriding each other.
 
-Additionally, KSP supports only a single `default` result per experiment. Any additional default entries are ignored by the game. ScienceRefactor converts these additional defaults into appropriate generic situations such as:
+Additionally, KSP supports only a single `default` result per experiment. Any additional default entries are ignored by the game. ScienceRefactor converts these additional defaults into generic situation keys such as `InSpace*` and `Srf*`, so that all results remain accessible.
 
-* `InSpace*`
-* `Srf*`
+## 1b. Specificity-first result selection (plugin)
 
-This ensures that all results remain accessible.
+Stock KSP picks a result text by throwing **every** key contained in the subject into one pool and drawing one at random. A generic key such as `Srf*` is contained in every surface subject, so a few dozen generic texts easily outnumber the two or three texts written for a specific biome, and biome results are rarely seen.
+
+ScienceRefactor ships a small plugin, **KSOScienceResults** (requires [HarmonyKSP](https://github.com/KSPModdingLibs/HarmonyKSP)), that patches the selection so that the most specific keys win: biome over body and situation, body and situation over situation alone, anything over `default`. All `default` entries of an experiment are used as a last resort instead of only the first one. Variety inside a group is preserved.
+
+Settings are in `GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.cfg` (`KSO_RESULTS_SETTINGS`, ModuleManager-patchable):
+
+* `enabled` – set to `false` to restore the stock behavior
+* `fallbackChance` (0–1, default `0`) – chance of stepping down to the next, less specific group, rolled again at every step. `0.2` gives roughly 80% biome texts, 16% body/situation texts, 3% situation texts, so generic results still show up now and then
+* `debugLog` – logs every selection to `KSP.log`
+
+The plugin only changes which text is shown; science values, subjects and saves are untouched. Without the core (or without Harmony) the result packages still work with the stock selection.
 
 Several minor patch errors in original mod configurations have also been corrected where they prevented results from appearing.
 
@@ -164,7 +173,7 @@ Kerbal Science Overhaul is available on [CKAN](https://github.com/KSP-CKAN/CKAN)
 | `KerbalScienceOverhaul-GEP` | `KSO_GEP` |
 | `KerbalScienceOverhaul-DeepSpaceStories` | `KSO_DeepSpaceStories` |
 
-All modules require **ModuleManager**. The result packages recommend ScienceRefactor, `KerbalScienceOverhaul-JNSQ` also recommends **JNSQ** (you can untick it to keep only the generic results for stock planets), and the localized CrowdSourced Science module replaces (and conflicts with) the original `CrowdSourcedScience`.
+All modules require **ModuleManager**; the core (ScienceRefactor) also requires **Harmony** (`Harmony2` on CKAN). The result packages recommend ScienceRefactor, `KerbalScienceOverhaul-JNSQ` also recommends **JNSQ** (you can untick it to keep only the generic results for stock planets), and the localized CrowdSourced Science module replaces (and conflicts with) the original `CrowdSourcedScience`.
 
 ### Manual installation
 
@@ -184,7 +193,7 @@ into:
 Kerbal Space Program/GameData
 ```
 
-This component can be installed independently.
+This component can be installed independently. It requires **ModuleManager** and **HarmonyKSP** (`GameData/000_Harmony`).
 
 ---
 

@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- KSP 1.12.5 runs Unity 2019.4 / Mono: target .NET Framework 4.7.2 -->
+    <TargetFramework>net472</TargetFramework>
+    <!-- Pinned to C# 5 so the same sources keep building with build.bat's
+         legacy csc (no SDK required). -->
+    <LangVersion>5</LangVersion>
+    <AssemblyName>KSOScienceResults</AssemblyName>
+    <RootNamespace>KSOScienceResults</RootNamespace>
+    <!-- Assembly attributes live in KSOScienceResults.cs, as build.bat compiles them. -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DebugType>none</DebugType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- KSP install the reference assemblies come from (nothing is copied
+         there). Override from the command line when it differs:
+             dotnet build -c Release -p:KspRoot="D:\path\to\KSP" -->
+    <KspRoot Condition="'$(KspRoot)' == ''">E:\SteamBackup\Kerbal Space Program</KspRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Compile against reference assemblies even without a local targeting pack -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(KspRoot)\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(KspRoot)\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(KspRoot)\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- HarmonyKSP (https://github.com/KSPModdingLibs/HarmonyKSP), a runtime dependency -->
+    <Reference Include="0Harmony">
+      <HintPath>$(KspRoot)\GameData\000_Harmony\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Same destination as build.bat: the repo's payload folder (the
+       installable mod, root of the release zip). Copying the DLL into a
+       KSP install is left to you. -->
+  <Target Name="DeployToGameData" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(MSBuildProjectDirectory)\..\..\GameData\001_KSO_ScienceRefactor\Plugins\" />
+  </Target>
+
+</Project>
