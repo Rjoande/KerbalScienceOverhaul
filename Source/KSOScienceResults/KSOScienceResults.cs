@@ -2,14 +2,19 @@
 //
 // Installs a Harmony prefix on ResearchAndDevelopment.GetResults so that the
 // most specific result keys (biome > body/situation > situation > default)
-// win, with an optional, configurable chance to fall back one tier at a time
-// for variety. See ResultsPatch.cs for the algorithm and
-// GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.cfg for the
-// settings (KSO_RESULTS_SETTINGS node, ModuleManager-patchable).
+// win, with a configurable chance to fall back one tier at a time for
+// variety. See ResultsPatch.cs for the algorithm.
+//
+// Settings: GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.txt
+// (ConfigNode syntax, KSO_RESULTS_SETTINGS node). It is a .txt on purpose:
+// KSP and ModuleManager ignore it, so editing it never invalidates the
+// ModuleManager cache. The plugin reads it straight from disk and reloads it
+// whenever the file changes, even mid-game.
 //
 // Requires Harmony 2 (HarmonyKSP, GameData/000_Harmony).
 
 using System;
+using System.IO;
 using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
@@ -32,26 +37,21 @@ namespace KSOScienceResults
         public void Awake()
         {
             DontDestroyOnLoad(gameObject);
-            if (!patched)
+            if (patched)
             {
-                try
-                {
-                    ApplyPatch();
-                    patched = true;
-                }
-                catch (Exception e)
-                {
-                    // Also reached when 0Harmony.dll is missing (type load failure).
-                    Debug.LogError(Tag + "patch NOT installed, stock result selection stays in use ("
-                        + e.GetType().Name + ": " + e.Message + ")");
-                }
+                return;
             }
-            GameEvents.OnGameDatabaseLoaded.Add(OnGameDatabaseLoaded);
-        }
-
-        public void OnDestroy()
-        {
-            GameEvents.OnGameDatabaseLoaded.Remove(OnGameDatabaseLoaded);
+            try
+            {
+                ApplyPatch();
+                patched = true;
+            }
+            catch (Exception e)
+            {
+                // Also reached when 0Harmony.dll is missing (type load failure).
+                Debug.LogError(Tag + "patch NOT installed, stock result selection stays in use ("
+                    + e.GetType().Name + ": " + e.Message + ")");
+            }
         }
 
         private static void ApplyPatch()
@@ -68,75 +68,91 @@ namespace KSOScienceResults
             harmony.Patch(target, new HarmonyMethod(prefix));
             Debug.Log(Tag + "v" + Version + ": ResearchAndDevelopment.GetResults patched");
         }
-
-        // Settings are re-read after every database load (startup and Alt-F12 reload).
-        private static void OnGameDatabaseLoaded()
-        {
-            Settings.Invalidate();
-        }
     }
 
     internal static class Settings
     {
+        public const string FileName = "KSOScienceResults.txt";
         public const string NodeName = "KSO_RESULTS_SETTINGS";
 
-        public static bool Enabled = true;
-        public static float FallbackChance = 0f;
-        public static bool DebugLog = false;
+        private const bool DefaultEnabled = true;
+        private const float DefaultFallbackChance = 0.2f;
+        private const float DefaultFallbackWeight = 1f;
+        private const bool DefaultDebugLog = false;
 
+        public static bool Enabled = DefaultEnabled;
+        public static float FallbackChance = DefaultFallbackChance;
+        public static float FallbackWeight = DefaultFallbackWeight;
+        public static bool DebugLog = DefaultDebugLog;
+
+        private static string path;
         private static bool loaded;
+        private static DateTime stamp;
 
-        public static void Invalidate()
-        {
-            loaded = false;
-        }
-
-        // Lazy: GameDatabase is not available when the addon starts (Startup.Instantly).
-        // Until the database is ready the defaults above apply.
+        // Called before every selection. Cheap: one file timestamp check; the file
+        // is parsed again only when it changed (or appeared / disappeared).
         public static void EnsureLoaded()
         {
-            if (loaded)
-            {
-                return;
-            }
-            GameDatabase db = GameDatabase.Instance;
-            if (db == null || !db.IsReady())
-            {
-                return;
-            }
-            loaded = true;
-            Enabled = true;
-            FallbackChance = 0f;
-            DebugLog = false;
             try
             {
-                ConfigNode[] nodes = db.GetConfigNodes(NodeName);
-                if (nodes == null || nodes.Length == 0)
+                if (path == null)
                 {
-                    Debug.Log(KSOScienceResultsAddon.Tag + "no " + NodeName + " node, using defaults");
+                    string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    path = Path.Combine(dir, FileName);
+                }
+                DateTime now = File.Exists(path) ? File.GetLastWriteTimeUtc(path) : DateTime.MinValue;
+                if (loaded && now == stamp)
+                {
                     return;
                 }
-                // ModuleManager leaves one final node; if several exist the last one wins.
-                ConfigNode node = nodes[nodes.Length - 1];
-                node.TryGetValue("enabled", ref Enabled);
-                node.TryGetValue("fallbackChance", ref FallbackChance);
-                node.TryGetValue("debugLog", ref DebugLog);
-                if (FallbackChance < 0f)
-                {
-                    FallbackChance = 0f;
-                }
-                else if (FallbackChance > 1f)
-                {
-                    FallbackChance = 1f;
-                }
-                Debug.Log(KSOScienceResultsAddon.Tag + "settings: enabled=" + Enabled
-                    + " fallbackChance=" + FallbackChance + " debugLog=" + DebugLog);
+                loaded = true;
+                stamp = now;
+                Load(now != DateTime.MinValue);
             }
             catch (Exception e)
             {
-                Debug.LogWarning(KSOScienceResultsAddon.Tag + "could not read " + NodeName
-                    + ", using defaults: " + e.Message);
+                loaded = true;
+                Debug.LogWarning(KSOScienceResultsAddon.Tag + "could not read " + FileName
+                    + ", keeping current settings: " + e.Message);
             }
+        }
+
+        private static void Load(bool fileExists)
+        {
+            Enabled = DefaultEnabled;
+            FallbackChance = DefaultFallbackChance;
+            FallbackWeight = DefaultFallbackWeight;
+            DebugLog = DefaultDebugLog;
+
+            if (!fileExists)
+            {
+                Debug.Log(KSOScienceResultsAddon.Tag + FileName + " not found, using defaults: " + Describe());
+                return;
+            }
+            ConfigNode root = ConfigNode.Load(path);
+            ConfigNode node = root == null ? null : root.GetNode(NodeName);
+            if (node == null)
+            {
+                Debug.LogWarning(KSOScienceResultsAddon.Tag + "no " + NodeName + " node in " + FileName
+                    + ", using defaults: " + Describe());
+                return;
+            }
+            node.TryGetValue("enabled", ref Enabled);
+            node.TryGetValue("fallbackChance", ref FallbackChance);
+            node.TryGetValue("fallbackWeight", ref FallbackWeight);
+            node.TryGetValue("debugLog", ref DebugLog);
+            FallbackChance = Mathf.Clamp01(FallbackChance);
+            if (FallbackWeight < 0f)
+            {
+                FallbackWeight = 0f;
+            }
+            Debug.Log(KSOScienceResultsAddon.Tag + "settings: " + Describe());
+        }
+
+        private static string Describe()
+        {
+            return "enabled=" + Enabled + " fallbackChance=" + FallbackChance
+                + " fallbackWeight=" + FallbackWeight + " debugLog=" + DebugLog;
         }
     }
 }

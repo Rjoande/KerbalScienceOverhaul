@@ -62,11 +62,15 @@ Stock KSP picks a result text by throwing **every** key contained in the subject
 
 ScienceRefactor ships a small plugin, **KSOScienceResults** (requires [HarmonyKSP](https://github.com/KSPModdingLibs/HarmonyKSP)), that patches the selection so that the most specific keys win: biome over body and situation, body and situation over situation alone, anything over `default`. All `default` entries of an experiment are used as a last resort instead of only the first one. Variety inside a group is preserved.
 
-Settings are in `GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.cfg` (`KSO_RESULTS_SETTINGS`, ModuleManager-patchable):
+Settings are in `GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.txt`. It is a plain text file on purpose: editing it never makes ModuleManager rebuild its cache, and the plugin reloads it as soon as it changes, even while the game is running:
 
 * `enabled` – set to `false` to restore the stock behavior
-* `fallbackChance` (0–1, default `0`) – chance of stepping down to the next, less specific group, rolled again at every step. `0.2` gives roughly 80% biome texts, 16% body/situation texts, 3% situation texts, so generic results still show up now and then
+* `fallbackChance` (0–1, default `0.2`) – minimum chance of stepping down to the next, less specific group, rolled again at every step. `0.2` gives roughly 80% biome texts, 16% body/situation texts, 3% situation texts, so generic results still show up now and then
+* `fallbackWeight` (default `1`) – makes small groups give way more often, so a biome with a single text does not repeat it four times out of five: a group of *n* texts is left with chance *k / (n + k)* when that is higher than `fallbackChance` (1 text: 50%, 2 texts: 33%, 4 or more: `fallbackChance`). `0` disables it
+* set both to `0` to always show the most specific group only
 * `debugLog` – logs every selection to `KSP.log`
+
+For troubleshooting, `GameData/001_KSO_ScienceRefactor/debug/KSO_ResultsTest.cfg.txt` is a disabled test patch: renamed to `.cfg`, it replaces every crew report result with labelled placeholders, one set per specificity level, so that `debugLog` shows exactly which group is drawn. Rename it back when done.
 
 The plugin only changes which text is shown; science values, subjects and saves are untouched. Without the core (or without Harmony) the result packages still work with the stock selection.
 

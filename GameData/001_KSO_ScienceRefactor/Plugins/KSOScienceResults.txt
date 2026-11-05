@@ -1,0 +1,32 @@
+// Settings for the KSOScienceResults plugin (science result selection).
+//
+// This is a .txt on purpose: KSP and ModuleManager ignore it, so changing a
+// value never forces ModuleManager to rebuild its cache. The plugin reads the
+// file directly and reloads it as soon as it changes, even while the game is
+// running: edit, save, take the next science report.
+KSO_RESULTS_SETTINGS
+{
+	// false: stock result selection (every matching key in one pool).
+	enabled = true
+
+	// 0..1. Matching result keys are grouped by specificity (biome, then
+	// body + situation, then situation, then "default"). Starting from the
+	// most specific group, this is the minimum chance of stepping down to
+	// the next group; it is rolled again at every step. 0.2 gives roughly
+	// 80% biome texts, 16% next group, 3% the one after that.
+	fallbackChance = 0.2
+
+	// Small groups give way more often, so a biome with a single text does
+	// not repeat it four times out of five. The chance of leaving a group
+	// of n texts is the larger of fallbackChance and k / (n + k), k being
+	// this value: the less specific groups count as k extra texts.
+	// With k = 1: 1 text -> 50%, 2 -> 33%, 3 -> 25%, 4 or more -> fallbackChance.
+	// 0 disables this and leaves fallbackChance alone.
+	fallbackWeight = 1
+
+	// Both fallbackChance = 0 and fallbackWeight = 0: always the most
+	// specific group, never anything else.
+
+	// true: log every selection (subject, groups, chosen key) to KSP.log.
+	debugLog = false
+}

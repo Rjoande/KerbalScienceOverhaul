@@ -8,8 +8,10 @@ into one pool and draws uniformly, so a handful of generic `Srf*` / `InSpace*`
 entries outnumber the two or three texts written for a biome. The algorithm
 is documented at the top of `ResultsPatch.cs`.
 
-Settings live in `GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.cfg`
-(`KSO_RESULTS_SETTINGS` node, ModuleManager-patchable).
+Settings live in `GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.txt`
+(`KSO_RESULTS_SETTINGS` node, ConfigNode syntax). The plugin reads the file
+from disk and reloads it whenever its timestamp changes; being a `.txt`, it is
+invisible to KSP's GameDatabase and to ModuleManager's cache hash.
 
 ## Building
 

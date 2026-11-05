@@ -18,7 +18,12 @@
 //     "subject*" duplicates stock ignored); a bare "*" is the lowest tier;
 //   - all "default" keys form the bottom tier, so several defaults do get used;
 //   - starting from the top tier, while a lower tier exists and
-//     Random.value < fallbackChance, step down one tier and roll again;
+//     Random.value < step chance, step down one tier and roll again. The
+//     step chance is max(fallbackChance, k / (n + k)), n being the number of
+//     entries in the current tier and k the fallbackWeight setting: the lower
+//     tiers count as k extra entries, so a tier holding a single text gives
+//     way half of the time (k = 1) instead of repeating itself, while a
+//     well-stocked tier only gives way at the fallbackChance floor;
 //   - draw uniformly inside the tier reached. Duplicate keys (Key*, Key**)
 //     stay separate entries, so biome variety is preserved;
 //   - no tier at all: the stock "no results" string.
@@ -142,13 +147,14 @@ namespace KSOScienceResults
             }
 
             int level = 0;
-            float chance = Settings.FallbackChance;
-            if (chance > 0f)
+            while (level < tiers.Count - 1)
             {
-                while (level < tiers.Count - 1 && UnityEngine.Random.value < chance)
+                float chance = StepChance(tiers[level].Keys.Count);
+                if (chance <= 0f || UnityEngine.Random.value >= chance)
                 {
-                    level++;
+                    break;
                 }
+                level++;
             }
             List<string> pool = tiers[level].Keys;
             string chosen = pool[UnityEngine.Random.Range(0, pool.Count)];
@@ -158,6 +164,23 @@ namespace KSOScienceResults
                 Debug.Log(KSOScienceResultsAddon.Tag + Describe(experiment.id, text, tiers, level, chosen));
             }
             return results[chosen];
+        }
+
+        // Chance of leaving a tier that holds n entries: the fallbackChance floor,
+        // raised to k / (n + k) when the tier is small (k = fallbackWeight).
+        internal static float StepChance(int n)
+        {
+            float chance = Settings.FallbackChance;
+            float k = Settings.FallbackWeight;
+            if (k > 0f)
+            {
+                float adaptive = k / (n + k);
+                if (adaptive > chance)
+                {
+                    chance = adaptive;
+                }
+            }
+            return chance;
         }
 
         private static Tier FindOrAddTier(List<Tier> tiers, int rank)

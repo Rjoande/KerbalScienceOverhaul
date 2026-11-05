@@ -1,0 +1,79 @@
+// DEBUG PATCH for the KSOScienceResults plugin. Shipped disabled: KSP only
+// reads *.cfg files, so this .cfg.txt does nothing. To run the test, rename
+// it to KSO_ResultsTest.cfg (same folder is fine), start KSP, and rename it
+// back when done. It replaces every crewReport result while active, so never
+// leave it enabled while playing.
+//
+// It wipes every crewReport result and installs a known set of keys, one or
+// more per specificity level, for the subject crewReport@KerbinSrfLandedLowlands
+// (crew report landed on Kerbin's Lowlands). Every text names its key, so
+// the result dialog (and KSP.log with debugLog = true) tells you which level
+// was drawn.
+//
+// Levels for KerbinSrfLandedLowlands, most specific first:
+//   T1  prefix/23   KerbinSrfLandedLowlands*                           (3 entries)
+//   T2  prefix/15   KerbinSrfLanded*                                   (2)
+//   T3  prefix/9    KerbinSrf*                                         (2)
+//   T4  prefix/6    Kerbin*                                            (1)
+//   T5  contains/9  SrfLanded*                                         (2)
+//   T6  contains/8  Lowlands*                                          (1)
+//   T7  contains/3  Srf*                                               (3)
+//   T8  default     default                                            (3)
+//   (a bare "*" key, the least specific match, cannot be tested from a
+//   ModuleManager patch: MM reads "*" as an operator and throws)
+//   --  never       MunSrfLanded*, KerbinSrfSplashed*, KerbinInSpace*  (must never show)
+//
+// Expected (settings in Plugins/KSOScienceResults.txt, reloaded on the fly):
+//   fallbackChance = 0,   fallbackWeight = 0 -> only T1 texts, ever.
+//   fallbackChance = 0.2, fallbackWeight = 0 -> about 80% T1, 16% T2, 3.2% T3,
+//                                               0.64% T4, then T5..T8 vanishing.
+//   fallbackChance = 0.2, fallbackWeight = 1 -> small tiers give way more often
+//                                               (3 texts: 25%, 2: 33%, 1: 50%):
+//                                               about 75% T1, 16.7% T2, 5.6% T3,
+//                                               1.4% T4, 0.9% T5, then vanishing.
+//   enabled = false                          -> stock: T1..T7 all in one pool of
+//                                               14 entries, uniform (T1 about
+//                                               21%), T8 never (not reached).
+//
+// NOTE: no "[*]" after EXPERIMENT_DEFINITION. EXPERIMENT_DEFINITION nodes have
+// no "name" value, so @EXPERIMENT_DEFINITION[*] silently matches nothing.
+
+@EXPERIMENT_DEFINITION:HAS[#id[crewReport]]:FINAL
+{
+	!RESULTS,* {}
+	RESULTS
+	{
+		KerbinSrfLandedLowlands* = [T1 BIOME] key KerbinSrfLandedLowlands*, text 1 of 3
+		KerbinSrfLandedLowlands* = [T1 BIOME] key KerbinSrfLandedLowlands*, text 2 of 3
+		KerbinSrfLandedLowlands* = [T1 BIOME] key KerbinSrfLandedLowlands*, text 3 of 3
+		// Optional, second test: uncomment this exact (star-less) key. Stock then
+		// ALWAYS returns it (exact match wins before the pool, duplicates ignored);
+		// the plugin puts it in T1 together with the three star entries (4 texts).
+		// KerbinSrfLandedLowlands = [T1 BIOME exact] key KerbinSrfLandedLowlands, text 0
+
+		KerbinSrfLanded* = [T2 BODY+SITUATION] key KerbinSrfLanded*, text 1 of 2
+		KerbinSrfLanded* = [T2 BODY+SITUATION] key KerbinSrfLanded*, text 2 of 2
+
+		KerbinSrf* = [T3 BODY+SURFACE] key KerbinSrf*, text 1 of 2
+		KerbinSrf* = [T3 BODY+SURFACE] key KerbinSrf*, text 2 of 2
+
+		Kerbin* = [T4 BODY] key Kerbin*, text 1 of 1
+
+		SrfLanded* = [T5 SITUATION contains-only] key SrfLanded*, text 1 of 2
+		SrfLanded* = [T5 SITUATION contains-only] key SrfLanded*, text 2 of 2
+
+		Lowlands* = [T6 BIOME-ONLY contains-only] key Lowlands*, text 1 of 1
+
+		Srf* = [T7 SURFACE contains-only] key Srf*, text 1 of 3
+		Srf* = [T7 SURFACE contains-only] key Srf*, text 2 of 3
+		Srf* = [T7 SURFACE contains-only] key Srf*, text 3 of 3
+
+		default = [T8 DEFAULT] key default, text 1 of 3
+		default = [T8 DEFAULT] key default, text 2 of 3
+		default = [T8 DEFAULT] key default, text 3 of 3
+
+		MunSrfLanded* = [NEVER] key MunSrfLanded* must not show at Kerbin
+		KerbinSrfSplashed* = [NEVER] key KerbinSrfSplashed* must not show when landed
+		KerbinInSpace* = [NEVER] key KerbinInSpace* must not show on the surface
+	}
+}
