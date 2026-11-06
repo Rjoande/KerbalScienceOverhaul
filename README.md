@@ -54,7 +54,7 @@ Some experiments—especially stock experiments—use rigid situation definition
 
 ScienceRefactor introduces the use of **ModuleManager wildcard conditions (`*`)**, allowing different science result packages to coexist without overriding each other.
 
-Additionally, KSP supports only a single `default` result per experiment. Any additional default entries are ignored by the game. ScienceRefactor converts these additional defaults into generic situation keys such as `InSpace*` and `Srf*`, so that all results remain accessible.
+Additionally, KSP itself reads only a single `default` result per experiment: any additional default entries are ignored by the game. Up to v1.2.1 ScienceRefactor worked around this by turning the extra defaults into generic situation keys such as `InSpace*` and `Srf*`, which kept them accessible but also let them outnumber the biome-specific texts. Since v1.3.0 they are plain `default` entries again, and the plugin described below draws among all of them.
 
 ## 1b. Specificity-first result selection (plugin)
 
@@ -72,7 +72,7 @@ Settings are in `GameData/001_KSO_ScienceRefactor/Plugins/KSOScienceResults.txt`
 
 For troubleshooting, `GameData/001_KSO_ScienceRefactor/debug/KSO_ResultsTest.cfg.txt` is a disabled test patch: renamed to `.cfg`, it replaces every crew report result with labelled placeholders, one set per specificity level, so that `debugLog` shows exactly which group is drawn. Rename it back when done.
 
-The plugin only changes which text is shown; science values, subjects and saves are untouched. Without the core (or without Harmony) the result packages still work with the stock selection.
+The plugin only changes which text is shown; science values, subjects and saves are untouched. Without the core (or without Harmony) the result packages still work with the stock selection; in that case KSP shows only the first `default` of each experiment whenever no more specific result matches.
 
 Several minor patch errors in original mod configurations have also been corrected where they prevented results from appearing.
 
