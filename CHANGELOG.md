@@ -2,6 +2,14 @@
 
 All notable changes to Kerbal Science Overhaul. Each entry matches the notes of the corresponding [GitHub release](https://github.com/Rjoande/KerbalScienceOverhaul/releases).
 
+## v1.3.1 (unreleased)
+
+- **Bluedog results for JNSQ biomes (core):** the `Bluedog_DB/JNSQbiomes` folder now loads only when JNSQ is installed. 13 keys that had escaped the JNSQ re-keying are converted, and two misspelled keys now match their biomes.
+
+- **Cleanup, `bd_XRayDiffract`:** six Moho keys inherited from Bluedog's file used pre-1.0 biome names that no longer exist, the sixth (`HighlandCraters`) now shows in Minor Craters.
+
+- **Stock results:** the two situation-only `InSpace*` entries (Mystery Goo, Materials Bay) formed a one-text group that the plugin showed far too often in orbit. The Goo text is a `default` now; the Materials Bay radiation text moved to Jool and solar orbit (`JoolInSpace*`, `SunInSpace*`), where it fits.
+
 ## v1.3.0 (2026-11-07)
 
 - **New plugin, KSOScienceResults (core):** stock KSP picks a result text by pooling every key contained in the subject and drawing one at random, so the generic `Srf*` / `InSpace*` entries (dozens per experiment) drowned the two or three texts written for each biome: in practice biome results were almost never shown. The core now ships a small Harmony plugin that makes the most specific keys win (biome > body/situation > situation > `default`), uses all `default` entries instead of only the first, and lets less specific texts through now and then: `fallbackChance` (default 0.2) is the chance of stepping down one group at a time, and `fallbackWeight` raises it for groups holding only one or two texts, so a lone biome text does not repeat itself. Settings in `Plugins/KSOScienceResults.txt`, reloaded on the fly and invisible to the ModuleManager cache. **New dependency: HarmonyKSP** (`Harmony2` on CKAN). The result packages keep working with the stock selection when the core is absent.
