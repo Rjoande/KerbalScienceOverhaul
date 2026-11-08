@@ -26,11 +26,11 @@ Normalization rules (mandatory):
   - the biome does not exist for that body/situation,
   - the situation is forbidden by the body.
 
-situationForbidden in jnsq_bodies.json always override experiment masks.
+situationForbidden in bodies.json always override experiment masks.
 
 SURFACE BIOME FILTERING (Landed vs Splashed)
 When generating SrfLanded or SrfSplashed filterKeys:
-- Use jnsq_bodies.json biome metadata to decide which biomes are valid on the surface.
+- Use bodies.json biome metadata to decide which biomes are valid on the surface.
 - If a biome defines surfaceSituations, it is eligible only for those situations.
   Example: a biome with ["SrfSplashed"] is never valid for SrfLanded keys.
 - If surfaceSituations is missing for a biome, treat it as ["SrfLanded"] by default (conservative).
@@ -69,7 +69,7 @@ SECTION D — GENERATING NEW RESULTS
 --------------------------------------------------
 
 Use:
-- bodyType, environment and biome descriptions (jnsq_bodies.json)
+- bodyType, environment and biome descriptions (bodies.json)
 - experiment description and hints from the experiment definition (*_ScienceDefs)
 - stylistic inspiration from similar experiments on similar bodyTypes
 

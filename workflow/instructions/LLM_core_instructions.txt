@@ -52,7 +52,7 @@ AUTHORITATIVE DATA SOURCES
 You must consult and obey the following project files:
 - *_ScienceDefs (CSS_ScienceDefs and custom ScienceDefs): primary source for experiments,
   including situationMask, biomeMask, situationList, biomeList, description, hints, results.
-- jnsq_bodies.json: body types, available situations, biomes, situationForbidden.
+- bodies.json: body types, available situations, biomes, situationForbidden.
 - experiment_masks_guide.json: canonical fallback rules for mask decoding, filterKey parsing,
   alias expansion, and deterministic normalization.
 - glossary.json: semantic meaning of experiments, mappingType definitions, mood and style hints.
@@ -60,7 +60,7 @@ You must consult and obey the following project files:
 HIERARCHY OF AUTHORITY
 1. Explicit instructions in the user prompt
 2. Experiment definitions in *_ScienceDefs
-3. jnsq_bodies.json constraints (especially situationForbidden)
+3. bodies.json constraints (especially situationForbidden)
 4. experiment_masks_guide.json (fallback disambiguation)
 5. glossary.json (semantic and stylistic guidance)
 
@@ -78,7 +78,7 @@ STEP 1 — DETERMINE VALID FILTERKEYS
    - If missing or inconsistent, derive them from situationMask / biomeMask using
      experiment_masks_guide.
 2. Remove any situation forbidden by the target body.
-3. Use jnsq_bodies.json biome metadata to decide which biomes are valid on the surface.
+3. Use bodies.json biome metadata to decide which biomes are valid on the surface.
 4. Build filterKeys:
    - <Body><Situation><Biome> when biome is allowed.
    - <Body><Situation> when biome is not allowed.
@@ -94,7 +94,7 @@ For each remaining filterKey:
 
 STEP 3 — GENERATE NEW RESULTS
 When generating new results:
-- Use body and biome descriptions from jnsq_bodies.json.
+- Use body and biome descriptions from bodies.json.
 - Use experiment description and hints from glossary.json.
 - Ensure results are consistent with bodyType and situation.
 - Generate at least minResultsPerCondition results per filterKey.
