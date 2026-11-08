@@ -2,15 +2,15 @@
 
 All notable changes to Kerbal Science Overhaul. Each entry matches the notes of the corresponding [GitHub release](https://github.com/Rjoande/KerbalScienceOverhaul/releases).
 
-## v1.3.1 (unreleased)
+## v1.3.1
 
 - **Bluedog results for JNSQ biomes (core):** the `Bluedog_DB/JNSQbiomes` folder now loads only when JNSQ is installed. 13 keys that had escaped the JNSQ re-keying are converted, and two misspelled keys now match their biomes.
 
-- **Cleanup, `bd_XRayDiffract`:** six Moho keys inherited from Bluedog's file used pre-1.0 biome names that no longer exist, the sixth (`HighlandCraters`) now shows in Minor Craters.
+- **Cleanup, `bd_XRayDiffract`:** six Moho keys inherited from Bluedog's file used pre-1.0 biome names that no longer exist. Five repeated texts already keyed to the current biomes and are removed; the sixth (`HighlandCraters`) now shows in Minor Craters.
 
 - **Stock results:** the two situation-only `InSpace*` entries (Mystery Goo, Materials Bay) formed a one-text group that the plugin showed far too often in orbit. The Goo text is a `default` now; the Materials Bay radiation text moved to Jool and solar orbit (`JoolInSpace*`, `SunInSpace*`), where it fits.
 
-## v1.3.0 (2026-11-07)
+## v1.3.0
 
 - **New plugin, KSOScienceResults (core):** stock KSP picks a result text by pooling every key contained in the subject and drawing one at random, so the generic `Srf*` / `InSpace*` entries (dozens per experiment) drowned the two or three texts written for each biome: in practice biome results were almost never shown. The core now ships a small Harmony plugin that makes the most specific keys win (biome > body/situation > situation > `default`), uses all `default` entries instead of only the first, and lets less specific texts through now and then: `fallbackChance` (default 0.2) is the chance of stepping down one group at a time, and `fallbackWeight` raises it for groups holding only one or two texts, so a lone biome text does not repeat itself. Settings in `Plugins/KSOScienceResults.txt`, reloaded on the fly and invisible to the ModuleManager cache. **New dependency: HarmonyKSP** (`Harmony2` on CKAN). The result packages keep working with the stock selection when the core is absent.
 
@@ -18,7 +18,7 @@ All notable changes to Kerbal Science Overhaul. Each entry matches the notes of 
 
 - **Bug fix:** two `bd_pegasus` generic results shared one localization tag, so one of them never appeared (en-us and it-it).
 
-## v1.2.1 (2026-10-28)
+## v1.2.1
 
 - **Launch pad flame deflector:** Kerbal Konstructs launch pads with pad smoke (e.g. the Tundra Space Center pads) tag their flame deflector as `LaunchpadFX`, and stock KSP turns it into a separate "biome" with a raw, untranslated name. All launch pad results now apply there as well, and the biome is shown as "Launch Pad (Flame Deflector)", localized in Italian and Simplified Chinese. Subjects already in your save keep their old title.
 
@@ -30,7 +30,7 @@ All notable changes to Kerbal Science Overhaul. Each entry matches the notes of 
 
 - **CKAN-ready:** every GameData folder now ships its own `LICENSE.txt`, and the core includes a KSP-AVC `.version` file (KSP 1.12.x). Once indexed, the mod will be available on CKAN as five modules: the core plus the optional CrowdSourced Science, JNSQ, GEP and Deep Space Stories packs.
 
-## v1.2.0 (2026-05-21)
+## v1.2.0
 
 - **Simplified Chinese (zh-cn) localization for CrowdSourced Science:** full coverage of all 4,467 CSS results, contributed by Aebestach.
 
@@ -38,17 +38,17 @@ All notable changes to Kerbal Science Overhaul. Each entry matches the notes of 
 
 - **Aebestach contributions patch:** 502 new science results authored by Aebestach, covering bodies and situations absent from CSS, plus experiments CSS never addressed: all 34 Breaking Ground ROC types, deployed science instruments, asteroidSample, cometSample (all period classes), and infraredTelescope. Available in both en-us and zh-cn.
 
-## v1.1.0 (2026-04-30)
+## v1.1.0
 
 Added 65 new science results for the Deep Space Stories pack, inspired by Andy Weir's *Project Hail Mary*.
 
 The full storyline is best experienced with Bluedog Design Bureau and the Grannus Expansion Pack, though stock experiments and Kerbol system will still include selected entries.
 
-## v1.0.1 (2026-03-24)
+## v1.0.1
 
 Small fix for 2 misspelled keys for `bd_camera` on Mun.
 
-## v1.0.0 (2026-03-21)
+## v1.0.0
 
 Initial public release of **Kerbal Science Overhaul Project (KSO)**.
 
