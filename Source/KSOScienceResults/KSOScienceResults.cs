@@ -21,7 +21,7 @@ using UnityEngine;
 
 [assembly: AssemblyTitle("KSOScienceResults")]
 [assembly: AssemblyDescription("Specificity-first science result selection for Kerbal Science Overhaul")]
-[assembly: AssemblyVersion("1.3.0.0")]
+[assembly: AssemblyVersion("1.3.1.0")]
 [assembly: KSPAssembly("KSOScienceResults", 1, 3)]
 
 namespace KSOScienceResults
@@ -29,7 +29,7 @@ namespace KSOScienceResults
     [KSPAddon(KSPAddon.Startup.Instantly, true)]
     public class KSOScienceResultsAddon : MonoBehaviour
     {
-        public const string Version = "1.3.0";
+        public const string Version = "1.3.1";
         public const string Tag = "[KSOScienceResults] ";
 
         private static bool patched;
