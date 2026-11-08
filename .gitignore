@@ -38,3 +38,8 @@ ModuleManager.TechTree
 Source/**/bin/
 Source/**/obj/
 Source/**/.vs/
+
+# Local workspace (session hub and notes, not part of the mod)
+/CLAUDE.md
+/notes/
+/.claude/
