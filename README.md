@@ -1,5 +1,7 @@
 # Kerbal Science Overhaul
 
+<p align="center"><img src="images/KSOa.png" width="560" alt="Kerbal Science Overhaul logo"></p>
+
 Refactored, localized, and AI-assisted science content for Kerbal Space Program
 
 ## Overview
