@@ -28,6 +28,7 @@ def blocks(txt):
         yield hdr, txt[i:j-1]
 
 entries = []  # (exp, key, folder)
+cleared = set()  # experiments whose patches delete the original RESULTS (!RESULTS {})
 def harvest(path, folder):
     txt = io.open(path, encoding='utf-8-sig', errors='replace').read()
     txt = re.sub(r'//[^\n]*', '', txt)
@@ -38,6 +39,7 @@ def harvest(path, folder):
         exp = m.group(1)
         for h2, b2 in blocks(body):
             if h2.lstrip('@+$%!-&|') != 'RESULTS': continue
+            if h2.startswith(('!', '-')): cleared.add(exp); continue
             for line in b2.splitlines():
                 if '=' in line:
                     k = line.split('=',1)[0].strip().lstrip('@%&|')
@@ -48,6 +50,10 @@ for root, _, files in os.walk(GD):
     for f in files:
         if f.endswith('.cfg'): harvest(os.path.join(root, f), folder)
 harvest(SQUAD, 'Squad')
+# The deleting patches run before every addition from the repo (the core's
+# patches come first and delete before re-adding), so they only remove the
+# stock texts.
+entries = [e for e in entries if not (e[2] == 'Squad' and e[0] in cleared)]
 
 biomes = {}
 for f in (os.listdir(JNSQB) if os.path.isdir(JNSQB) else []):
